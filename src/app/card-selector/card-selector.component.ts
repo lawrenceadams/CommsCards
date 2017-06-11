@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuOption } from "./menuOption.model";
 
 @Component({
   selector: 'app-card-selector',
@@ -7,11 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardSelectorComponent implements OnInit {
 
-  menuOptions: string[] = [
-    "Select by Year",
-    "Select by System",
-    "Select by Card Type",
-    "Select by CCP"
+  menuOptions: MenuOption[] = [
+    new MenuOption("Study by Year", "/study/year"),
+    new MenuOption("Study by System", "/study/system"),
+    new MenuOption("Study by Type", "/study/type")
   ]
 
   constructor() { }

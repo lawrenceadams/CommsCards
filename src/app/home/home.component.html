@@ -1,9 +1,19 @@
-<div class="ui four column container raised segment">
+<!--<div class="ui four column container raised segment">
   <p>Welcome to the Communication Skills Flashcard App</p>
   <ul class="ui middle aligned selection list">
     <div class="item"><a href="https://mbchb.dundee.ac.uk">MBChB Dundee</a></div>
-    <div class="item" routerLinkActive="active"><a [routerLink]="['/about']">About</a></div>
-    <div class="item" routerLinkActive="active"><a [routerLink]="['/legal']">Legal</a></div>
-    <div class="item" routerLinkActive="active"><a [routerLink]="['/study']">Start Studying</a></div>
+    <div class="item"><a [routerLink]="['/about']">About</a></div>
+    <div class="item"><a [routerLink]="['/legal']">Legal</a></div>
+    <div class="item"><a [routerLink]="['/study']">Start Studying</a></div>
+  </ul>
+</div>-->
+
+<div class="ui four column container raised segment">
+  <p>Welcome to the Communication Skills Flashcard App</p>
+  <ul class="ui middle aligned selection list">
+    <a class="item" href="https://mbchb.dundee.ac.uk">MBChB Dundee</a>
+    <a class="item" [routerLink]="['/about']">About</a>
+    <a class="item" [routerLink]="['/legal']">Legal</a>
+    <a class="item" [routerLink]="['/study']">Start Studying</a>
   </ul>
 </div>
