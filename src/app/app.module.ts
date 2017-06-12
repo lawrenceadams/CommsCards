@@ -24,7 +24,6 @@ const routes: Routes = [
   { path: 'study/year', component: CardYearSelectorComponent },
   { path: 'study/system', component: CardSystemSelectorComponent },
   { path: 'study/type', component: CardTypeSelectorComponent }
-  // { path: 'cardselector', component: AboutComponent },
 ]
 
 @NgModule({
@@ -49,8 +48,6 @@ const routes: Routes = [
   ],
   bootstrap: [AppComponent]
 })
-
-
 
 export class AppModule {
 

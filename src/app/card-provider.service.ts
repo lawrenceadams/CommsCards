@@ -2,7 +2,17 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class CardProviderService {
+  cards: string[] = []
 
-  constructor() { }
+  setCards(cards) {
+    this.cards = cards;
+  }
 
+  getCards() {
+    return this.cards;
+  }
+
+  destroyCards() {
+    this.cards = [];
+  }
 }
