@@ -1,12 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { MenuOption } from "app/card-selector/menuOption.model";
+import { routeFadeStateTrigger } from "../../common/route.animations";
 
 @Component({
   selector: 'app-card-type-selector',
   templateUrl: './card-type-selector.component.html',
-  styleUrls: ['./card-type-selector.component.css']
+  styleUrls: ['./card-type-selector.component.css'],
+  animations: [routeFadeStateTrigger]
 })
 export class CardTypeSelectorComponent implements OnInit {
+
+  @HostBinding('@routeFadeState') routeAnimation = true;
 
   typeOptions: MenuOption[] = [
     new MenuOption("Health Promotion", "/study/type/healthpromo"),
