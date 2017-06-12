@@ -10,9 +10,9 @@
 
 <div class="container">
   <p>Welcome to the Communication Skills Flashcard App </p>
-  <div class="ui list">
-    <div class="item"><button class="fluid large ui button" href="https://mbchb.dundee.ac.uk">MBChB Home <i class="right floated building icon"></i></button></div>
+  <div class="columns">
+    <div class="item"><button class="button is-light" href="https://mbchb.dundee.ac.uk">MBChB Home <i class="right floated building icon"></i></button></div>
     <div class="item" *ngFor="let option of mainMenuOptions">
-      <button class="fluid large ui left floated button" [routerLink]="option.routerLink" [innerHTML]="option.text" [class.green]="option.color"></button></div>
+      <button class="button is-light" [routerLink]="option.routerLink" [innerHTML]="option.text" [class.is-primary]="option.color"></button></div>
   </div>
 </div>
