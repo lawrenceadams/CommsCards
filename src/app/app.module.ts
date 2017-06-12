@@ -14,16 +14,19 @@ import { CardYearSelectorComponent } from './card-selector/card-year-selector/ca
 import { trigger, state, animate, transition, style } from '@angular/animations';
 import { CardSystemSelectorComponent } from './card-selector/card-system-selector/card-system-selector.component';
 import { CardTypeSelectorComponent } from './card-selector/card-type-selector/card-type-selector.component';
+import { StudyQueryHandlerComponent } from './study-query-handler/study-query-handler.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: "full" },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'legal', component: LegalComponent },
-  { path: 'study', component: CardSelectorComponent },
-  { path: 'study/year', component: CardYearSelectorComponent },
-  { path: 'study/system', component: CardSystemSelectorComponent },
-  { path: 'study/type', component: CardTypeSelectorComponent }
+  { path: 'studyby', component: CardSelectorComponent },
+  { path: 'studyby/year', component: CardYearSelectorComponent },
+  { path: 'studyby/system', component: CardSystemSelectorComponent },
+  { path: 'studyby/type', component: CardTypeSelectorComponent },
+  { path: 'study/:query/:queryterm', component: StudyQueryHandlerComponent },
+  { path: 'study', redirectTo: 'studyby', pathMatch: "full" }
 ]
 
 @NgModule({
@@ -35,7 +38,8 @@ const routes: Routes = [
     CardSelectorComponent,
     CardYearSelectorComponent,
     CardSystemSelectorComponent,
-    CardTypeSelectorComponent
+    CardTypeSelectorComponent,
+    StudyQueryHandlerComponent
   ],
   imports: [
     BrowserModule,

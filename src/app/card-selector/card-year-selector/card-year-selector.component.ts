@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MenuOption } from "../menuOption.model";
 
 @Component({
@@ -12,7 +12,7 @@ export class CardYearSelectorComponent implements OnInit {
   */
 
   yearOptions: MenuOption[] = [
-    new MenuOption("Year 1", "/study/year/1"), // Needs to setup card viewer now... #hardWork
+    new MenuOption("Year 1", "/study/year/1"),
     new MenuOption("Year 2", "/study/year/2"),
     new MenuOption("Year 3", "/study/year/3")
   ]

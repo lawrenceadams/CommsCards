@@ -1,3 +1,5 @@
-<p>
-  card-system-selector works!
-</p>
+<div class="ui four column container raised segment">
+  <div *ngFor="let option of systemOptions" class="ui middle aligned selection list">
+    <div class="item" [routerLink]="option.routerLink">{{option.text}}</div>
+  </div>
+</div>

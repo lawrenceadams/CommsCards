@@ -9,9 +9,9 @@ import { MenuOption } from "./menuOption.model";
 export class CardSelectorComponent implements OnInit {
 
   menuOptions: MenuOption[] = [
-    new MenuOption("Study by Year", "/study/year"),
-    new MenuOption("Study by System", "/study/system"),
-    new MenuOption("Study by Type", "/study/type")
+    new MenuOption("Study by Year", "/studyby/year"),
+    new MenuOption("Study by System", "/studyby/system"),
+    new MenuOption("Study by Type", "/studyby/type")
   ]
 
   constructor() { }

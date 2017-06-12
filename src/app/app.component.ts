@@ -10,6 +10,6 @@ export class AppComponent {
   title = 'app';
   cards: string[];
 
-  constructor(public _CardProviderService: CardProviderService) {
+  constructor(public CardProviderService: CardProviderService) {
   }
 }
