@@ -15,6 +15,7 @@ import { trigger, state, animate, transition, style } from '@angular/animations'
 import { CardSystemSelectorComponent } from './card-selector/card-system-selector/card-system-selector.component';
 import { CardTypeSelectorComponent } from './card-selector/card-type-selector/card-type-selector.component';
 import { StudyQueryHandlerComponent } from './study-query-handler/study-query-handler.component';
+import { MenuBuilderComponent } from './common/menu-builder/menu-builder.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: "full" },
@@ -39,7 +40,8 @@ const routes: Routes = [
     CardYearSelectorComponent,
     CardSystemSelectorComponent,
     CardTypeSelectorComponent,
-    StudyQueryHandlerComponent
+    StudyQueryHandlerComponent,
+    MenuBuilderComponent
   ],
   imports: [
     BrowserModule,

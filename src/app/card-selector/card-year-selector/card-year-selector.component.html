@@ -1,5 +1,5 @@
-<div class="ui four column container raised segment">
-  <div *ngFor="let option of yearOptions" class="ui middle aligned selection list">
-    <div class="item" [routerLink]="option.routerLink">{{option.text}}</div>
+<section class="section">
+  <div class="container box box-evs">
+    <app-menu-builder [menuInputObject]="yearOptions"></app-menu-builder>
   </div>
-</div>
+</section>

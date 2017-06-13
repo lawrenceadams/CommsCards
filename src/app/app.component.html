@@ -1,19 +1,13 @@
-<!--The whole content below can be removed with the new code.-->
-<div class="ui secondary menu">
-  <a class="ui item" [routerLink]="['/home']">Home</a>
-  <a class="ui item" [routerLink]="['/about']">About</a>
-  <a class="ui item" [routerLink]="['/legal']">Legal</a>
-  <div class="right menu">
-    <div class="item">
-      <div class="ui right floated computer only grid">
-        <h3 style="color: blueviolet;">EVS Comms Skills App</h3>
-      </div>
-    </div>
+<nav class="nav has-shadow">
+  <div class="nav-left">
+    <a class="nav-item" [routerLink]="['/home']">Home</a>
+    <a class="nav-item" [routerLink]="['/about']">About</a>
+    <a class="nav-item" [routerLink]="['/legal']">Legal</a>
   </div>
-</div>
+  <div class="nav-right">
+    <span class="nav-item is-hidden-mobile"><h3 style="color: blueviolet;">EVS Comms Skills App</h3></span>
+  </div>
 
-<div class="content">
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
-</div>
+</nav>
+
+<router-outlet></router-outlet>

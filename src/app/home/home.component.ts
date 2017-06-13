@@ -14,9 +14,9 @@ export class HomeComponent implements OnInit {
   @HostBinding('@routeFadeState') routeAnimation = true;
 
   mainMenuOptions: MenuOption[] = [
-    new MenuOption(`About <i class="right floated info icon"></i>`, "/about"),
-    new MenuOption(`Legal <i class="right floated law icon"></i>`, "/legal"),
-    new MenuOption(`Start Studying <i class="right floated treatment icon"></i>`, "/studyby/", "green")
+    new MenuOption(`About <span class="icon is-pulled-right"><i class="fa fa-info" aria-hidden="true"></i></span>`, "/about"),
+    new MenuOption(`Legal <span class="icon is-pulled-right"><i class="fa fa-gavel" aria-hidden="true"></i></span>`, "/legal"),
+    new MenuOption(`Start Studying <span class="icon is-pulled-right"><i class="fa fa-stethoscope" aria-hidden="true"></i></span>`, "/studyby/", "green")
   ]
 
   constructor() { }

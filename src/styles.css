@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* GLOBAL BOX STYLE */
+.box-evs {
+    max-width: 700px !important;
+}

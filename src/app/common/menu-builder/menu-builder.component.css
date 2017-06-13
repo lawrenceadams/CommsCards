@@ -1,7 +1,3 @@
-:host {
-    display: block;
-}
-
 button {
     text-align: left;
     display: inline-block !important;
