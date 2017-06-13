@@ -1,3 +1,20 @@
 :host {
     display: block;
 }
+
+button {
+    text-align: left;
+    display: inline-block;
+}
+
+ul li {
+    list-style: none;
+}
+
+.fill-div {
+    width:100%
+}
+
+.field > button {
+    margin-top: 5px;
+}

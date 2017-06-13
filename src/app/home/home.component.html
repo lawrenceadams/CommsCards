@@ -1,18 +1,27 @@
-<!--<div class="ui four column container raised segment">
-  <p>Welcome to the Communication Skills Flashcard App</p>
-  <ul class="ui middle aligned selection list">
-    <a class="item" href="https://mbchb.dundee.ac.uk">MBChB Dundee <i class="right floated building icon"></i></a>
-    <a class="item" [routerLink]="['/about']">About <i class="right floated info icon"></i></a>
-    <a class="item" [routerLink]="['/legal']">Legal <i class="right floated law icon"></i></a>
-    <a class="item" [routerLink]="['/studyby']">Start Studying <i class="right floated treatment icon"></i></a>
-  </ul>
-</div>-->
-
-<div class="container">
-  <p>Welcome to the Communication Skills Flashcard App </p>
-  <div class="columns">
-    <div class="item"><button class="button is-light" href="https://mbchb.dundee.ac.uk">MBChB Home <i class="right floated building icon"></i></button></div>
-    <div class="item" *ngFor="let option of mainMenuOptions">
-      <button class="button is-light" [routerLink]="option.routerLink" [innerHTML]="option.text" [class.is-primary]="option.color"></button></div>
+<!--<section class="section">
+  <div class="container content">
+    <p>Welcome to the Communication Skills Flashcard App</p>
+    <ul>
+      <li><button class="button is-light" [routerLink]="home">MBChB Home</button></li>
+      <li *ngFor="let option of mainMenuOptions">
+        <button class="button is-light" [routerLink]="option.routerLink" [innerHTML]="option.text" [class.is-primary]="option.color"></button>
+      </li>
+    </ul>
   </div>
-</div>
+</section>-->
+
+<section class="section">
+  <div class="container box" style="max-width: 700px">
+    <p>Welcome to the Communication Skills Flashcard App</p>
+    <hr style="margin-bottom: 12px">
+    <div class="field">
+      <button class="button is-medium is-light has-text-left is-fullwidth" [routerLink]="home">MBChB Home</button>
+      <div *ngFor="let option of mainMenuOptions">
+        <button class="button is-medium is-light has-text-left is-fullwidth" [routerLink]="option.routerLink" [innerHTML]="option.text"
+          [class.is-primary]="option.color"></button>
+      </div>
+    </div>
+
+    <app-menu-builder [menuInputObject]="mainMenuOptions"></app-menu-builder>
+  </div>
+</section>
