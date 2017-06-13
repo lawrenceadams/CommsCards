@@ -5,7 +5,7 @@ import { HashLocationStrategy, LocationStrategy } from "@angular/common";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { AppComponent } from './app.component';
-import { CardProviderService } from './card-provider.service';
+import { CardProviderService } from './common/services/card-provider.service';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { LegalComponent } from './legal/legal.component';

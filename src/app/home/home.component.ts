@@ -1,7 +1,7 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { MenuOption } from "../card-selector/menuOption.model";
 import { routeFadeStateTrigger } from "../common/route.animations";
-
+import { CardProviderService } from "../common/services/card-provider.service";
 
 @Component({
   selector: 'app-home',
@@ -19,9 +19,10 @@ export class HomeComponent implements OnInit {
     new MenuOption(`Start Studying <span class="icon is-pulled-right"><i class="fa fa-stethoscope"></i></span>`, "/studyby/", "green")
   ]
 
-  constructor() { }
+  constructor(private service: CardProviderService) { }
 
   ngOnInit() {
+    console.log(this.service.getCardQuery());
   }
 
 }

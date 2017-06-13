@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CardProviderService } from "./card-provider.service";
+import { CardProviderService } from "./common/services/card-provider.service";
 
 @Component({
   selector: 'app-root',
