@@ -1,7 +1,5 @@
 <section class="section">
   <div class="container">
-    <div *ngFor="let option of yearOptions" class="ui middle aligned selection list">
-      <div class="item" [routerLink]="option.routerLink">{{option.text}}</div>
-    </div>
+    <app-menu-builder [menuInputObject]="yearOptions"></app-menu-builder>
   </div>
 </section>
