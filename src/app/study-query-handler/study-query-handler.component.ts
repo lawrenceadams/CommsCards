@@ -18,6 +18,7 @@ export class StudyQueryHandlerComponent implements OnInit {
   queryterm: string;
   private sub: any;
   cardsToStudy: Card[];
+  noCards: boolean;
 
   constructor(private route: ActivatedRoute, private service: CardProviderService) { }
 
@@ -29,9 +30,8 @@ export class StudyQueryHandlerComponent implements OnInit {
 
     this.service.setCardQuery(this.query, this.queryterm);
     this.service.setStudyCards();
-    this.cardsToStudy = this.service.getCards();
 
-    console.log(this.service.getCardQuery());
-    console.log(this.service.getCards());
+    // console.log(this.service.getCardQuery());
+    // console.log(this.service.getCards());
   }
 }

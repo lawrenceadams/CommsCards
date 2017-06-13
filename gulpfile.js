@@ -9,7 +9,7 @@ gulp.task('build-aot', function (cb) {
         console.log(stderr);
         cb(err);
     });
-})
+});
 
 gulp.task('clean', function () {
     return del.sync("dist");
