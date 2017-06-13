@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
   constructor(private service: CardProviderService) { }
 
   ngOnInit() {
+    this.service.destroyCardQuery()
     console.log(this.service.getCardQuery());
   }
 

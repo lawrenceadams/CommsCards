@@ -2,6 +2,7 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { routeFadeStateTrigger } from "../common/route.animations";
 import { CardProviderService } from "../common/services/card-provider.service";
+import { Card } from "../common/cards/card.model";
 
 @Component({
   selector: 'app-study-query-handler',
@@ -16,6 +17,7 @@ export class StudyQueryHandlerComponent implements OnInit {
   query: string;
   queryterm: string;
   private sub: any;
+  cardsToStudy: Card[];
 
   constructor(private route: ActivatedRoute, private service: CardProviderService) { }
 
@@ -26,10 +28,10 @@ export class StudyQueryHandlerComponent implements OnInit {
     });
 
     this.service.setCardQuery(this.query, this.queryterm);
+    this.service.setStudyCards();
+    this.cardsToStudy = this.service.getCards();
 
     console.log(this.service.getCardQuery());
-
-
+    console.log(this.service.getCards());
   }
-
 }

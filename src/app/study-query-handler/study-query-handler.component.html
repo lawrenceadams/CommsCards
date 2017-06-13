@@ -5,3 +5,10 @@
     </p>
   </div>
 </section>
+<section class="section">
+  <div class="container box box-evs">
+    <ul *ngFor="let card of cardsToStudy; index as i">
+      <li><b>CardFoundIndex {{i}}</b> → Card ID = {{card.id}}, Card Front = {{card.front}}</li>
+    </ul>
+  </div>
+</section>
