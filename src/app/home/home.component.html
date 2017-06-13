@@ -1,21 +1,9 @@
-<!--<section class="section">
-  <div class="container content">
-    <p>Welcome to the Communication Skills Flashcard App</p>
-    <ul>
-      <li><button class="button is-light" [routerLink]="home">MBChB Home</button></li>
-      <li *ngFor="let option of mainMenuOptions">
-        <button class="button is-light" [routerLink]="option.routerLink" [innerHTML]="option.text" [class.is-primary]="option.color"></button>
-      </li>
-    </ul>
-  </div>
-</section>-->
-
 <section class="section">
-  <div class="container box" style="max-width: 700px">
-    <p>Welcome to the Communication Skills Flashcard App</p>
+  <div class="container box box-evs">
+    <p class="subtitle has-text-centered">Welcome to the Communication Skills Flashcard App</p>
     <hr style="margin-bottom: 12px">
     <div class="field">
-      <button class="button is-medium is-light has-text-left is-fullwidth" [routerLink]="home">MBChB Home</button>
+      <a href="https://mbchb.dundee.ac.uk"><button class="button is-medium is-light has-text-left is-fullwidth">MBChB Home <span class="icon is-pulled-right"><i class="fa fa-home"></i></span></button></a>
       <app-menu-builder [menuInputObject]="mainMenuOptions"></app-menu-builder>
     </div>
   </div>
