@@ -30,8 +30,6 @@ export class StudyQueryHandlerComponent implements OnInit {
 
     this.service.setCardQuery(this.query, this.queryterm);
     this.service.setStudyCards();
-
-    // console.log(this.service.getCardQuery());
-    // console.log(this.service.getCards());
+    this.cardsToStudy = this.service.getCards();
   }
 }
