@@ -26,3 +26,10 @@ button {
         padding: 1.25rem;
     }
 }
+
+/* -moz fix */
+button > span {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}

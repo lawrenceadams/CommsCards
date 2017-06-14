@@ -14,3 +14,7 @@
         padding: 1.25rem;
     }
 }
+
+.g-mozfix {
+    white-space: inherit ! important;
+}
