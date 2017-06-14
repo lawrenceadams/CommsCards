@@ -3,9 +3,9 @@ import { Card } from "./card.model";
 export const FLASHCARDS: Card[] = [
     {
         "id": 1,
-        "title": "Explain a 10 year, 50% risk reduction in lung cancer",
         "front": "<p>Mr Arjo has recently stopped smoking cigarettes, with a 15 pack year history.</p><p>Explain to Mr Arjo that 10 years from now he will have a 50% risk reduction for lung cancer in comparison to his current risk.</p>",
         "back": "<p>All smokers have a higher chance of developing lung cancer than non-smokers. Smoking is the main cause of lung cancer and lung cancer is the UKs biggest cancer killer.</p><p>As soon as you stop smoking, the risk of lung cancer starts to reduce and over time the risk continues to reduce. Within ten years of stopping smoking, you will have halved your risk of developing lung cancer compared with someone who continued to smoke - this is a significant improvement.</p><p>Of course, by maintaining a healthy lifestyle (exercising, eating well, avoiding too much alcohol and not smoking) you can keep your body fitter for longer too.</p>",
+        "title": "Explain a 10 year, 50% risk reduction in lung cancer",
         "system": [
             "resp",
             "cardio"

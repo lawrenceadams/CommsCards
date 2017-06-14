@@ -1,17 +1,8 @@
 <section class="section">
-  <div class="container box box-evs">
-    <p>
-      You have selected to study by <em>{{ query }}</em> and have chosen <b>{{ query }} {{ queryterm }}</b>
-    </p>
-    <hr>
-    <ul *ngFor="let card of cardsToStudy; index as i">
-      <li><b>CardFoundIndex {{i}}</b> → Card ID = {{card.id}}, Card Front = {{card.front}}</li>
-    </ul>
-    <div class="notification is-danger" *ngIf="cardsToStudy.length === 0">
-      No cards in the card store matched this query. <span class="icon is-pulled-right"><i class="fa fa-exclamation-triangle"></i></span>
-    </div>
-  </div>
   <!-- Attempt to make card chooser.-->
   <div class="container box box-evs">
+    <div *ngFor="let card of cardsToStudy" class="field">
+      <button class="button is-light has-text-left is-fullwidth wrap-override" [innerHTML]="card.title"></button>
+    </div>
   </div>
 </section>

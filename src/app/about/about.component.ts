@@ -8,6 +8,7 @@ import { routeFadeStateTrigger } from "../common/route.animations";
   animations: [routeFadeStateTrigger]
 })
 export class AboutComponent implements OnInit {
+
   @HostBinding('@routeFadeState') routeAnimation = true;
 
   constructor() { }
