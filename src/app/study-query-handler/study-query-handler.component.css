@@ -17,3 +17,10 @@ button {
     height: unset;
     min-height: 2.25em;
 }
+
+/* Only apply this style on mobile. */
+@media (max-width:800px) {
+    .section {
+        padding-top: 24px !important;
+    }
+}
