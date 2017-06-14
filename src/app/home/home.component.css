@@ -5,11 +5,7 @@
 button {
     text-align: left;
     display: inline-block !important;
-    line-height: unset; /* Fixes strage floating text when adding icon is-pulled-right */
-}
-
-ul li {
-    list-style: none;
+    line-height: unset;  /* Fixes strange floating text when adding icon is-pulled-right */
 }
 
 .field button {
