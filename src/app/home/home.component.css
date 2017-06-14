@@ -15,3 +15,11 @@ ul li {
 .field button {
     margin-top: 10px;
 }
+
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width:801px)  { 
+    img {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
