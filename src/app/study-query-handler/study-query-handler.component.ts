@@ -24,12 +24,12 @@ export class StudyQueryHandlerComponent implements OnInit {
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-      this.query = params['query'];
-      this.queryterm = params['queryterm'];
+      this.query = params['query']; // Get the 'queryby' (system/type/year) from the url
+      this.queryterm = params['queryterm']; // Get the 'query' (year 1/2/3) from the url. Bit hacky ~ might need to replace at somepoint
     });
 
-    this.service.setCardQuery(this.query, this.queryterm);
-    this.service.setStudyCards();
-    this.cardsToStudy = this.service.getCards();
+    this.service.setCardQuery(this.query, this.queryterm); // Service > Set cards to get for the given query
+    this.service.setStudyCards(); // Sets the service cards[] instance to the required cards
+    this.cardsToStudy = this.service.getCards(); // Sets the local card instance to the required cards
   }
 }
