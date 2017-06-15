@@ -26,8 +26,8 @@ const routes: Routes = [
   { path: 'studyby/year', component: CardYearSelectorComponent },
   { path: 'studyby/system', component: CardSystemSelectorComponent },
   { path: 'studyby/type', component: CardTypeSelectorComponent },
-  { path: 'study/:query/:queryterm', component: StudyQueryHandlerComponent },
-  { path: 'study', redirectTo: 'studyby', pathMatch: "full" }
+  { path: 'studyby/:query/:queryterm', component: StudyQueryHandlerComponent },
+  { path: 'studyby', redirectTo: 'studyby', pathMatch: "full" }
 ]
 
 @NgModule({
