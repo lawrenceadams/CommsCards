@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 
 import { routeFadeStateTrigger } from "../common/route.animations";
@@ -24,6 +24,7 @@ export class FlashCardComponent implements OnInit {
   constructor(private route: ActivatedRoute, private service: CardProviderService) { }
 
   ngOnInit() {
+    // Set navbar to studymode.
     this.sub = this.route.params.subscribe(params => {
       this.query = params['query']; // Get the 'queryby' (system/type/year) from the url
       this.queryterm = params['queryterm']; // Get the 'query' (year 1/2/3) from the url. Bit hacky ~ might need to replace at somepoint
