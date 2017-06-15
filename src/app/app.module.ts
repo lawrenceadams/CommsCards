@@ -16,18 +16,20 @@ import { CardSystemSelectorComponent } from './card-selector/card-system-selecto
 import { CardTypeSelectorComponent } from './card-selector/card-type-selector/card-type-selector.component';
 import { StudyQueryHandlerComponent } from './study-query-handler/study-query-handler.component';
 import { MenuBuilderComponent } from './common/menu-builder/menu-builder.component';
+import { FlashCardComponent } from './flash-card/flash-card.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: "full" },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'legal', component: LegalComponent },
-  { path: 'studyby', component: CardSelectorComponent },
-  { path: 'studyby/year', component: CardYearSelectorComponent },
-  { path: 'studyby/system', component: CardSystemSelectorComponent },
-  { path: 'studyby/type', component: CardTypeSelectorComponent },
-  { path: 'studyby/:query/:queryterm', component: StudyQueryHandlerComponent },
-  { path: 'studyby', redirectTo: 'studyby', pathMatch: "full" }
+  { path: 'study', component: CardSelectorComponent },
+  { path: 'study/year', component: CardYearSelectorComponent },
+  { path: 'study/system', component: CardSystemSelectorComponent },
+  { path: 'study/type', component: CardTypeSelectorComponent },
+  { path: 'study/:query/:queryterm', component: StudyQueryHandlerComponent },
+  { path: 'study', redirectTo: 'study', pathMatch: "full" },
+  { path: 'study/:query/:queryterm/card/:id', component: FlashCardComponent }
 ]
 
 @NgModule({
@@ -41,7 +43,8 @@ const routes: Routes = [
     CardSystemSelectorComponent,
     CardTypeSelectorComponent,
     StudyQueryHandlerComponent,
-    MenuBuilderComponent
+    MenuBuilderComponent,
+    FlashCardComponent
   ],
   imports: [
     BrowserModule,

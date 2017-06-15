@@ -12,9 +12,9 @@ export class CardSelectorComponent implements OnInit {
   @HostBinding('@routeFadeState') routeAnimation = true;
 
   menuOptions: MenuOption[] = [
-    new MenuOption("Study by Year", "/studyby/year"),
-    new MenuOption("Study by System", "/studyby/system"),
-    new MenuOption("Study by Type", "/studyby/type")
+    new MenuOption("Study by Year", "/study/year"),
+    new MenuOption("Study by System", "/study/system"),
+    new MenuOption("Study by Type", "/study/type")
   ]
 
   constructor() { }

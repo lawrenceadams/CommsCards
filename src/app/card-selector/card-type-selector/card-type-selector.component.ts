@@ -13,11 +13,11 @@ export class CardTypeSelectorComponent implements OnInit {
   @HostBinding('@routeFadeState') routeAnimation = true;
 
   typeOptions: MenuOption[] = [
-    new MenuOption("Health Promotion", "/studyby/type/healthpromo"),
-    new MenuOption("Types of Consultation/Skills", "/studyby/type/typesofconsul"),
-    new MenuOption("Consent & Procedure", "/studyby/type/consentproc"),
-    new MenuOption("Explanation & Planning", "/studyby/type/explainplan"),
-    new MenuOption("Explaining Diseases", "/studyby/type/explaindisease")
+    new MenuOption("Health Promotion", "/study/type/healthpromo"),
+    new MenuOption("Types of Consultation/Skills", "/study/type/typesofconsul"),
+    new MenuOption("Consent & Procedure", "/study/type/consentproc"),
+    new MenuOption("Explanation & Planning", "/study/type/explainplan"),
+    new MenuOption("Explaining Diseases", "/study/type/explaindisease")
   ]
 
   constructor() { }

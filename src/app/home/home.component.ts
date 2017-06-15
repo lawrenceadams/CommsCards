@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   mainMenuOptions: MenuOption[] = [
     new MenuOption(`About <span class="icon is-pulled-right"><i class="fa fa-info"></i></span>`, "/about"),
     new MenuOption(`Legal <span class="icon is-pulled-right"><i class="fa fa-gavel"></i></span>`, "/legal"),
-    new MenuOption(`Start Studying <span class="icon is-pulled-right"><i class="fa fa-stethoscope"></i></span>`, "/studyby/", "green")
+    new MenuOption(`Start Studying <span class="icon is-pulled-right"><i class="fa fa-stethoscope"></i></span>`, "/study/", "green")
   ]
 
   constructor(private service: CardProviderService) { }

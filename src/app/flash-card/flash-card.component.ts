@@ -1,24 +1,25 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
+
 import { routeFadeStateTrigger } from "../common/route.animations";
-import { CardProviderService } from "../common/services/card-provider.service";
 import { Card } from "../common/cards/card.model";
+import { CardProviderService } from "../common/services/card-provider.service";
 
 @Component({
-  selector: 'app-study-query-handler',
-  templateUrl: './study-query-handler.component.html',
-  styleUrls: ['./study-query-handler.component.css'],
+  selector: 'app-flash-card',
+  templateUrl: './flash-card.component.html',
+  styleUrls: ['./flash-card.component.css'],
   animations: [routeFadeStateTrigger]
 })
-export class StudyQueryHandlerComponent implements OnInit {
+export class FlashCardComponent implements OnInit {
 
   @HostBinding('@routeFadeState') routeAnimation = true;
 
   query: string;
   queryterm: string;
-  private sub: any;
   cardsToStudy: Card[];
-  noCards: boolean;
+
+  private sub: any;
 
   constructor(private route: ActivatedRoute, private service: CardProviderService) { }
 
@@ -28,13 +29,16 @@ export class StudyQueryHandlerComponent implements OnInit {
       this.queryterm = params['queryterm']; // Get the 'query' (year 1/2/3) from the url. Bit hacky ~ might need to replace at somepoint
     });
 
-    this.service.setCardQuery(this.query, this.queryterm); // Service --> Set cards to get for the given query
-    this.service.setStudyCards(); // Sets the service cards[] instance to the required cards
-    this.cardsToStudy = this.service.getCards(); // Sets the local card instance to the required cards
+    this.cardsToStudy = this.service.getCards();
+
+    if (this.cardsToStudy.length === 0) {
+      console.warn("Route was hotlinked! No current card state is set.");
+      console.log("Rebuilding cardsToStudy");
+
+      this.service.setCardQuery(this.query, this.queryterm); // Service --> Set cards to get for the given query
+      this.service.setStudyCards(); // Sets the service cards[] instance to the required cards
+      this.cardsToStudy = this.service.getCards(); // Sets the local card instance to the required cards
+    }
   }
 
-  logClick(id) {
-    console.log(id);
-    console.log(typeof (id));
-  }
 }

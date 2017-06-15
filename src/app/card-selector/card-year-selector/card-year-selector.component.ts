@@ -16,9 +16,9 @@ export class CardYearSelectorComponent implements OnInit {
   @HostBinding('@routeFadeState') routeAnimation = true;
 
   yearOptions: MenuOption[] = [
-    new MenuOption("Year 1", "/studyby/year/1"),
-    new MenuOption("Year 2", "/studyby/year/2"),
-    new MenuOption("Year 3", "/studyby/year/3")
+    new MenuOption("Year 1", "/study/year/1"),
+    new MenuOption("Year 2", "/study/year/2"),
+    new MenuOption("Year 3", "/study/year/3")
   ]
 
   constructor() { }
