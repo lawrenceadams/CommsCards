@@ -6,12 +6,12 @@
   </div>
   <ng-template #studyNavBar>
     <div class="nav-center">
-      <a class="nav-item" (click)="previousCardClick()">
+      <a class="nav-item" (click)="sendMessage('previous')">
         <span class="icon">
           <i class="fa fa-arrow-left"></i>
         </span>
     </a>
-      <a class="nav-item" (click)="nextCardClick()">
+      <a class="nav-item" (click)="sendMessage('next')">
         <span class="icon">
           <i class="fa fa-arrow-right"></i>
         </span>

@@ -1,9 +1,11 @@
-import { Component, OnInit, HostBinding, EventEmitter } from '@angular/core';
+import { Component, OnInit, HostBinding, EventEmitter, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
+import { Subscription } from "rxjs";
 
 import { routeFadeStateTrigger } from "../common/route.animations";
 import { Card } from "../common/cards/card.model";
 import { CardProviderService } from "../common/services/card-provider.service";
+import { MessageService } from "../common/services/messenger.service";
 
 @Component({
   selector: 'app-flash-card',
@@ -11,9 +13,10 @@ import { CardProviderService } from "../common/services/card-provider.service";
   styleUrls: ['./flash-card.component.css'],
   animations: [routeFadeStateTrigger]
 })
-export class FlashCardComponent implements OnInit {
-
+export class FlashCardComponent implements OnInit, OnDestroy {
   @HostBinding('@routeFadeState') routeAnimation = true;
+
+  subscription: Subscription;
 
   query: string;
   queryterm: string;
@@ -21,7 +24,22 @@ export class FlashCardComponent implements OnInit {
 
   private sub: any;
 
-  constructor(private route: ActivatedRoute, private service: CardProviderService) { }
+  constructor(private route: ActivatedRoute, private service: CardProviderService, private messageService: MessageService) {
+    /*
+    * Setup a service listener to recieve each message and act upon it accordingly
+    */
+    this.subscription = this.messageService.getMessage().subscribe(message => {
+      console.info(message);
+
+      if (message === 'next') {
+        this.nextCard()
+      } else if (message === 'previous') {
+        this.previousCard();
+      }
+
+
+    });
+  }
 
   ngOnInit() {
     // Set navbar to studymode.
@@ -40,6 +58,19 @@ export class FlashCardComponent implements OnInit {
       this.service.setStudyCards(); // Sets the service cards[] instance to the required cards
       this.cardsToStudy = this.service.getCards(); // Sets the local card instance to the required cards
     }
+  }
+
+  ngOnDestroy() {
+    // Prevents memory leaks
+    this.subscription.unsubscribe();
+  }
+
+  nextCard() {
+    // TODO
+  }
+
+  previousCard() {
+    // TODO
   }
 
 }

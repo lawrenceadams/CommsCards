@@ -1,6 +1,8 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { Router, NavigationEnd } from "@angular/router";
+
 import { routeFadeStateTrigger } from "./common/route.animations";
+import { MessageService } from "./common/services/messenger.service";
 
 @Component({
   selector: 'app-root',
@@ -16,7 +18,8 @@ export class AppComponent {
 
   private isStudying: boolean = false;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private messageService: MessageService) {
+
     // Get the currently set route/URL
     router.events.subscribe((val) => {
       // If the user is studying (route ../study/:cardID)
@@ -36,12 +39,12 @@ export class AppComponent {
    * TODO: Build a messenger service to communicate these clicks
    */
 
-  previousCardClick() {
-    // TODO
+  sendMessage(msg): void {
+    this.messageService.sendMessage(msg);
   }
 
-  nextCardClick() {
-    // TODO
+  clearMessage(): void {
+    // clear message
+    this.messageService.clearMessage();
   }
-
 }

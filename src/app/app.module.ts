@@ -17,6 +17,7 @@ import { CardTypeSelectorComponent } from './card-selector/card-type-selector/ca
 import { StudyQueryHandlerComponent } from './study-query-handler/study-query-handler.component';
 import { MenuBuilderComponent } from './common/menu-builder/menu-builder.component';
 import { FlashCardComponent } from './flash-card/flash-card.component';
+import { MessageService } from "./common/services/messenger.service";
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: "full" },
@@ -53,6 +54,7 @@ const routes: Routes = [
   ],
   providers: [
     CardProviderService,
+    MessageService,
     { provide: LocationStrategy, useClass: HashLocationStrategy } // Comment this out for non hash based routing
   ],
   bootstrap: [AppComponent]
