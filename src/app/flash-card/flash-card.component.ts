@@ -96,7 +96,7 @@ export class FlashCardComponent implements OnInit, OnDestroy {
    * Otherwise, decrease activeCardID
    */
   previousCard() {
-    if (this.currentCardIndex === 0) {
+    if (this.currentCardIndex <= 0) {
       this.currentCardIndex = this.cardsToStudy.length - 1;
       // TODO Notify user that we are looping back.
       console.info("At beginning of deck - Looping back to end.")
