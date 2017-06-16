@@ -24,6 +24,7 @@ export class FlashCardComponent implements OnInit, OnDestroy {
   cardsToStudy: Card[];
   currentCard: Card;
   currentCardIndex: number;
+  isFlipped: boolean = false;
 
   private sub: any;
   private currentURL: string;
@@ -119,5 +120,12 @@ export class FlashCardComponent implements OnInit, OnDestroy {
 
     this.currentURL = strippedURL.join('/');
     this.location.go(this.currentURL);
+  }
+
+  /**
+   * On clicking the front or back of the card the flip state it toggled
+   */
+  toggleFlip() {
+    this.isFlipped = !this.isFlipped;
   }
 }
