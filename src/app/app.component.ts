@@ -16,13 +16,17 @@ export class AppComponent {
   title = 'app';
   cards: string[];
 
-  private isStudying: boolean = false;
+  isStudying: boolean = false;
 
   constructor(private router: Router, private messageService: MessageService) {
 
     // Get the currently set route/URL
     router.events.subscribe((val) => {
-      // If the user is studying (route ../study/:cardID)
+      /**
+      * If the user is studying (route ../study/:cardID)
+      * then set isStudying to true in order to set the 
+      * navbar to change.
+      */
       if (val instanceof NavigationEnd) {
         console.log(val.url);
         if (val.url.includes('/card/')) {

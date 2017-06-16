@@ -13,7 +13,9 @@ export class CardProviderService {
     this.subquery;
 
     var result: Card[];
-    // Process search
+    /**
+     * Searches card store for the correct card by filtering by type/year/system.
+     */
     console.log("Searching " + this.query + " for " + this.subquery);
     if (this.query === "type") {
       result = FLASHCARDS.filter(searchCard => searchCard.type === this.subquery);
@@ -22,12 +24,16 @@ export class CardProviderService {
     } else if (this.query === "year") {
       result = FLASHCARDS.filter(searchCard => searchCard.year === Number(this.subquery));
     } else {
-      // err.
+      console.error("Route was likely set to an unknown search type")
     }
     this.setCards(result);
   }
 
-  setCards(cards) {
+  /**
+   * Takes a Card[] object and sets the current card session to those cards.
+   * @param cards 
+   */
+  setCards(cards: Card[]) {
     this.cards = cards;
   }
 
@@ -35,6 +41,9 @@ export class CardProviderService {
     return this.cards;
   }
 
+  /**
+   * Resets the card provider service in order to prevent errors.
+   */
   destroyCards() {
     this.cards = [];
   }
