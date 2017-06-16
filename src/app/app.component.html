@@ -6,12 +6,22 @@
   </div>
   <ng-template #studyNavBar>
     <div class="nav-center">
-      <a class="nav-item" (click)="sendMessage('previous')">
+      <a class="nav-item nav-item-padded" (click)="sendMessage('previous')">
         <span class="icon">
           <i class="fa fa-arrow-left"></i>
         </span>
     </a>
-      <a class="nav-item" (click)="sendMessage('next')">
+      <a class="nav-item nav-item-padded" routerLink="home">
+        <span class="icon">
+          <i class="fa fa-home"></i>
+        </span>
+    </a>
+      <a class="nav-item nav-item-padded" [routerLink]="queryMenuUrl">
+        <span class="icon">
+          <i class="fa fa-level-up"></i>
+        </span>
+    </a>
+      <a class="nav-item nav-item-padded" (click)="sendMessage('next')">
         <span class="icon">
           <i class="fa fa-arrow-right"></i>
         </span>

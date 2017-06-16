@@ -7,3 +7,8 @@
 :host {
     display: block;
 }
+
+.nav-item-padded {
+    padding-left: 2rem ;
+    padding-right: 2rem ;
+}

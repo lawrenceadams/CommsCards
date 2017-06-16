@@ -1,5 +1,6 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { Router, NavigationEnd } from "@angular/router";
+import { Location } from "@angular/common";
 
 import { routeFadeStateTrigger } from "./common/route.animations";
 import { MessageService } from "./common/services/messenger.service";
@@ -15,10 +16,11 @@ export class AppComponent {
 
   title = 'app';
   cards: string[];
+  queryMenuUrl: string;
 
   isStudying: boolean = false;
 
-  constructor(private router: Router, private messageService: MessageService) {
+  constructor(private router: Router, private messageService: MessageService, private location: Location) {
 
     // Get the currently set route/URL
     router.events.subscribe((val) => {
@@ -35,6 +37,13 @@ export class AppComponent {
           this.isStudying = false;
         }
       }
+
+      // Set URL for backing up to card menu
+      var currentURL = this.location.path().split('/');
+      currentURL.pop(); // Remove /card/:id
+      currentURL.pop(); // Remove /card/ 
+      this.queryMenuUrl = currentURL.join('/');
+
     });
   }
 
