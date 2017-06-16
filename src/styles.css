@@ -18,3 +18,11 @@
 .g-mozfix {
     white-space: inherit ! important;
 }
+
+/*
+    Fixes weird margins below 1000px width.
+    Overrides Bulma original
+*/
+.container {
+    margin: 0 auto;
+}
