@@ -28,7 +28,7 @@
 }
 
 .flip-container, .front, .back {
-    width: 80vw;
+    width: 70vw;
 	height: 70vh;
 }
 
@@ -82,7 +82,7 @@ p {
 
 @media (max-width:800px) {
     .flip-container, .front, .back {
-    width: 90vw; /* Bigger cards on mobile to maximise screen space*/
-	height: 70vh; 
+    width: 80vw; /* Bigger cards on mobile to maximise screen space*/
+	height: 70vh;
 	}
 }

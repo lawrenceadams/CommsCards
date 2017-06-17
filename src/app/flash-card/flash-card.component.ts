@@ -83,6 +83,8 @@ export class FlashCardComponent implements OnInit, OnDestroy {
    * Otherwise, increase activeCardID
    */
   nextCard() {
+    // First, set the front of the card to be viewed.
+    this.isFlipped = false;
     if ((this.currentCardIndex + 1) >= this.cardsToStudy.length) {
       this.currentCardIndex = 0;
       // TODO Notify user that we are looping
@@ -99,6 +101,8 @@ export class FlashCardComponent implements OnInit, OnDestroy {
    * Otherwise, decrease activeCardID
    */
   previousCard() {
+    // First, set the front of the card to be viewed.
+    this.isFlipped = false;
     if (this.currentCardIndex <= 0) {
       this.currentCardIndex = this.cardsToStudy.length - 1;
       // TODO Notify user that we are looping back.
