@@ -9,13 +9,13 @@ import { CardProviderService } from "../common/services/card-provider.service";
 import { MessageService } from "../common/services/messenger.service";
 import { SafeHTMLPipe } from "../common/pipes/htmlSanitizerBypass.pipe";
 
-
 @Component({
   selector: 'app-flash-card',
   templateUrl: './flash-card.component.html',
   styleUrls: ['./flash-card.component.css'],
   animations: [routeFadeStateTrigger]
 })
+
 export class FlashCardComponent implements OnInit, OnDestroy {
   @HostBinding('@routeFadeState') routeAnimation = true;
 
@@ -24,7 +24,6 @@ export class FlashCardComponent implements OnInit, OnDestroy {
   query: string;
   queryterm: string;
   cardsToStudy: Card[];
-  currentCard: Card;
   currentCardIndex: number;
   isFlipped: boolean = false;
 
