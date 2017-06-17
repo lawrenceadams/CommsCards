@@ -81,7 +81,7 @@ export class FlashCardComponent implements OnInit, OnDestroy {
    * Otherwise, increase activeCardID
    */
   nextCard() {
-    if (this.cardsToStudy.length === (this.currentCardIndex + 1)) {
+    if ((this.currentCardIndex + 1) >= this.cardsToStudy.length) {
       this.currentCardIndex = 0;
       // TODO Notify user that we are looping
     } else {
