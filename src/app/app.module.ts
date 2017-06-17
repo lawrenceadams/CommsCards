@@ -18,6 +18,7 @@ import { StudyQueryHandlerComponent } from './study-query-handler/study-query-ha
 import { MenuBuilderComponent } from './common/menu-builder/menu-builder.component';
 import { FlashCardComponent } from './flash-card/flash-card.component';
 import { MessageService } from "./common/services/messenger.service";
+import { SafeHTMLPipe } from "./common/pipes/htmlSanitizerBypass.pipe";
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: "full" },
@@ -25,11 +26,11 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'legal', component: LegalComponent },
   { path: 'study', component: CardSelectorComponent },
+  { path: 'study', redirectTo: 'study', pathMatch: "full" },
   { path: 'study/year', component: CardYearSelectorComponent },
   { path: 'study/system', component: CardSystemSelectorComponent },
   { path: 'study/type', component: CardTypeSelectorComponent },
   { path: 'study/:query/:queryterm', component: StudyQueryHandlerComponent },
-  { path: 'study', redirectTo: 'study', pathMatch: "full" },
   { path: 'study/:query/:queryterm/card/:id', component: FlashCardComponent }
 ]
 
@@ -45,7 +46,8 @@ const routes: Routes = [
     CardTypeSelectorComponent,
     StudyQueryHandlerComponent,
     MenuBuilderComponent,
-    FlashCardComponent
+    FlashCardComponent,
+    SafeHTMLPipe
   ],
   imports: [
     BrowserModule,

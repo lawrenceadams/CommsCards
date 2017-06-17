@@ -1,12 +1,12 @@
 <section class="section">
   <!-- Attempt to make card chooser.-->
   <div class="card-container">
-    <div class="flip-container" ontouchstart="this.classList.toggle('hover');" [class.flip]="isFlipped">
+    <div class="flip-container" [class.flip]="isFlipped">
       <div class="flipper">
         <div class="front" [innerHTML]="cardsToStudy[currentCardIndex].front" (click)="toggleFlip()">
           <!-- front content -->
         </div>
-        <div class="back" [innerHTML]="cardsToStudy[currentCardIndex].back" (click)="toggleFlip()">
+        <div class="back" [innerHTML]="cardsToStudy[currentCardIndex].back | safeHTML" (click)="toggleFlip()">
           <!-- back content -->
         </div>
       </div>

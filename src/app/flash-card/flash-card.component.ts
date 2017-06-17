@@ -7,6 +7,8 @@ import { routeFadeStateTrigger } from "../common/route.animations";
 import { Card } from "../common/cards/card.model";
 import { CardProviderService } from "../common/services/card-provider.service";
 import { MessageService } from "../common/services/messenger.service";
+import { SafeHTMLPipe } from "../common/pipes/htmlSanitizerBypass.pipe";
+
 
 @Component({
   selector: 'app-flash-card',
