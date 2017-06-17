@@ -79,3 +79,10 @@
 p {
     padding-top: 20px !important;
 }
+
+@media (max-width:800px) {
+    .flip-container, .front, .back {
+    width: 90vw; /* Bigger cards on mobile to maximise screen space*/
+	height: 70vh; 
+	}
+}
