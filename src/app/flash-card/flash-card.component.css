@@ -65,6 +65,8 @@
     border-radius: 10px;
 	box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
 
+	transition: 0.3s background-color;
+
 	border: 1px solid #dee2e3;
     overflow-y: auto;
 
@@ -100,3 +102,8 @@ p {
 	height: 70vh;
 	}
 }
+
+.front:active, .back:active { 
+  background-color: #ffe8cc; 
+  transition: .3s background-color; 
+} 
