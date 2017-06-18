@@ -3,7 +3,7 @@
   <div class="card-container">
     <div class="flip-container" [class.flip]="isFlipped">
       <div class="flipper">
-        <div class="front" [innerHTML]="cardsToStudy[currentCardIndex].front" (click)="toggleFlip()" fragment="top">
+        <div class="front" [innerHTML]="cardsToStudy[currentCardIndex].front | safeHTML" (click)="toggleFlip()" fragment="top">
           <!-- front content -->
         </div>
         <div class="back" [innerHTML]="cardsToStudy[currentCardIndex].back | safeHTML" (click)="toggleFlip()" fragment="top">
