@@ -53,7 +53,7 @@ export const FLASHCARDS: Card[] = [
         "id": 4,
         "title": "In your pair discuss the steps in an effective handover",
         "front": "<p>In your pair discuss the steps in giving an effective handover.</p>",
-        "back": `<p><i>An iSBAR approach may be taken to ensure a succinct handover is given:</i></p><br><p><b style="color: #ff6264">Identify</b> – Identify yourself (name, role) and the patient (name, DOB, location)</p><p><b style="color: #ff6264">Situation</b> – What is currently going on? What are the main problems arising?</p><p><b style="color: #ff6264">Background</b> – What relevant history is there? PMH, Medication, Investigations.</p><p><b style="color: #ff6264">Assessment</b> –What do you think is going on? What have you found? Ensure you have relevant observations and examination findings to hand.</p><p><b style="color: #ff6264">Recommendation</b> – What is the purpose of the call? What do you want to happen next? (Advice, referral, treatment, review?) Be clear about your request/time-frame.</p>`,
+        "back": "<p><i>An iSBAR approach may be taken to ensure a succinct handover is given:</i></p><br><p><b style='color: #ff6264'>Identify</b> – Identify yourself (name, role) and the patient (name, DOB, location)</p><p><b style='color: #ff6264'>Situation</b> – What is currently going on? What are the main problems arising?</p><p><b style='color: #ff6264'>Background</b> – What relevant history is there? PMH, Medication, Investigations.</p><p><b style='color: #ff6264'>Assessment</b> –What do you think is going on? What have you found? Ensure you have relevant observations and examination findings to hand.</p><p><b style='color: #ff6264'>Recommendation</b> – What is the purpose of the call? What do you want to happen next? (Advice, referral, treatment, review?) Be clear about your request/time-frame.</p>",
         "system": [
             ""
         ],
@@ -65,7 +65,7 @@ export const FLASHCARDS: Card[] = [
     },
     {
         "id": 5,
-        "title": "Interpret the report and explain the next steps to the patient",
+        "title": "Interpret an X-ray report and explain the next steps to the patient",
         "front": "<p>Read the following radiology report for a 70 y/o man with shortness of breath and explain the next steps</p> <br> <p>‘CXR showed blunting of both costophrenic angles with a meniscus sign on the right and bilateral perihilar haze. There is an increased cardiothoracic ratio consistent with cardiomegaly’</p>",
         "back": "<p>Pleural effusions, perihilar oedema and cardiomegaly – suggests Congestive Cardiac Failure.</p><p>The X-Ray suggests that there is some fluid collecting around your lungs, and your heart appears a little enlarged. The most likely cause of your breathlessness is that this fluid in your lungs is making it difficult to breathe. This fluid has possibly started to accumulate because your heart isn’t working as it should, which means that it perhaps isn’t pumping the blood around your body as smoothly as we’d expect.</p> <p>We would like to do a type of ultrasound scan called an echocardiogram to tell us a bit more about how your heart is working as well as an ECG heart tracing looking at the electrical activity in your heart. We would also like to start some medication to remove the fluid in your lungs.</p>",
         "system": [
@@ -151,6 +151,97 @@ export const FLASHCARDS: Card[] = [
         "CCP": [
             17,
             74
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Explain β-blocker side effects",
+        "front": "<p>Explain to the patient the possible side effects they may experience when starting on beta blocker therapy for angina</p>",
+        "back": "<p><i>Beta blockers are used for a number of conditions and so it maybe useful to start a discussion by explaining why the patient is receiving them:</i></p><p>So, you’re taking beta blockers because when we last checked your blood pressure it was a little high and this medicine should help to bring that down a bit. This is important as high blood pressure can put more pressure on your heart, especially when you have other medical problems such as angina.</p><p>Common side effects include nausea, diarrhoea, tiredness and cold hands and feet; these are nothing to be too worried about but if you do experience these you should contact your GP to discuss if a better alternative is available. People may experience light-headedness or even fainting when they stand up too quickly, this can be caused by too big a dose of beta blockers and so you should let your GP know so that they can alter the dose and hopefully prevent further problems. </p><p>Less commonly beta blockers may cause a change in mood or even your sleep pattern; if this is the case your GP can help you to find a better option which agrees with your body better. </p>",
+        "system": [
+            "cardio"
+        ],
+        "type": "explainplan",
+        "year": 1,
+        "CCP": [
+            25,
+            86,
+            52,
+            69
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Explain what is meant by the term ‘Heart Failure’",
+        "front": "<p>Explain to the patient what is meant by the term ‘Heart Failure’<p>",
+        "back": "<p>Sometimes when our heart is under a lot of strain because of other health problems it can become stiff or weak, which limits its ability to work as well as it used to. This means that the heart doesn’t pump blood around the body quite as well as it did.</p><p>This is called heart failure, although it is important to note that the heart does still work just not quite as effectively as it once did. It doesn’t mean your heart is about to suddenly stop.</p><p>With medication the symptoms that you feel because of your heart problems (such as breathlessness, ankle swelling and tiredness) may resolve or improve.</p><p>Although heart failure may be caused by a heart attack, they are not the same thing and one does not always lead to the other.</p>",
+        "system": [
+            "cardio"
+        ],
+        "type": "explaindisease",
+        "year": 1,
+        "CCP": [
+            74,
+            51
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Explain what 'angina' is and the likely treatment",
+        "front": "<p>Explain the term ‘angina’ to a patient and how it may be treated</p>",
+        "back": "<p>Angina happens when the blood that supplies the heart muscle with oxygen and energy is unable to reach it properly. Often this occurs because one or more of the blood vessels that carries blood to the heart has become slightly narrowed. Smoking, being overweight, a diet high in saturated fats, high blood pressure and family history of heart problems can all increase your risk of angina.</p><p>Most patients find that the symptoms of angina happen when they are working hard or exercising and this can cause problems such as chest pain because the heart muscle is not getting enough oxygen. Upon resting for a few minutes symptoms usually improve.</p><p>Medication is used to help control the symptoms and reduce your risk of the angina worsening. Improving your lifestyle can also help prevent further worsening.</p><p>It is important to remember that if medication or resting does not improve your symptoms then you should go to hospital or call an ambulance immediately as there is a chance that you are experiencing something more serious such as a heart attack.</p>",
+        "system": [
+            "cardio"
+        ],
+        "type": "explaindisease",
+        "year": 1,
+        "CCP": [
+            14,
+            74
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Explain the pathophysiology and management of GORD",
+        "front": "<p>Explain the pathophysiology of Gastro-Oesophageal Reflux Disease to a patient and discuss ways to help this condition</p>",
+        "back": "<p>Gastro-oesophageal reflux is the name given to a condition whereby some of the acid that is normally contained within your stomach to help breakdown food has made its way backwards into your oesophagus (the tube which connects your mouth and your stomach).</p><p>Most of the time this has happened because the muscles which stop food and acid flowing backwards into this tube have become weakened for one reason or another. The presence of acid in the oesophagus causes the pain or ‘heart burn’ like symptoms.</p><p>Avoidance of specific triggers can help (alcohol, caffeine, smoking, fatty and spicy foods). If you are overweight then weight loss can also help. In addition medications which reduce stomach acid can be used to relieve with symptoms.</p>",
+        "system": [
+            "gi"
+        ],
+        "type": "explaindisease",
+        "year": 1,
+        "CCP": [
+            2
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Explain what 'Bronchiectasis' is",
+        "front": "<p>Mrs Jones has just been told that she has bronchiectasis but has no idea what this means.</p><p>Explain the diagnosis to Mrs Jones</p>",
+        "back": "<p>The lungs are made up of a series of tiny tubes which are lined by even smaller hairs and mucus in order to trap all of the bugs and dust that we breathe in.</p><p>In bronchiectasis these tubes are widened and so the hairs struggle to catch all of the dust and some of the mucus becomes stuck rather than being coughed up. This means that sometimes the tubes within the lungs become blocked up and it can be difficult to breathe. People with bronchiectasis often have a persistent cough and are more prone to chest infections.</p><p>Bronchiectasis is a long-term condition so cannot be ‘cured’ and the severity of symptoms can vary from one individual to another. However, there are treatments that can help to relieve these symptoms.</p><p><i>NB: Drawing a diagram to demonstrate this may help some patients to understand.</i></p>",
+        "system": [
+            "resp"
+        ],
+        "type": "explaindisease",
+        "year": 1,
+        "CCP": [
+            74,
+            20,
+            38
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Explain Atrial Fibrillation to a patient",
+        "front": "<p>Explain Atrial Fibrillation to a stable 50y/o patient <i>(BP 130/85, HR 85 Irregular)</i> who has presented to the GP with palpitations.</p><p>Then explain next steps in management.</p>",
+        "back": "<p>Palpitations (or an awareness of your own heartbeat) can be caused by various things including something called Atrial Fibrillation (AF). AF is a condition whereby the heart’s rhythm has been disrupted and so instead of beating regularly as it should, it beats more irregularly.</p><p>There is a simple test we can do called an ECG, which shows the rhythm of your heart. If we confirm AF then we will look into why this might have occurred and discuss further treatment options. Treatment might include tablets to control the heart rate and to prevent future problems associated with AF such as a stroke.</p><p>People with AF may not have any symptoms; however, AF can cause symptoms such as breathlessness, dizziness or chest pain. If you develop any of these symptoms you need to see a doctor urgently.</p><p><i>NB: It may be useful to ‘tap out’ a normal heart rhythm and then the patient’s heart rhythm. This would give you an extra method of communication to enhance understanding and discussions.</i></p>",
+        "system": [
+            "cardio"
+        ],
+        "type": "explaindisease",
+        "year": 1,
+        "CCP": [
+            62
         ]
     }
 ];
