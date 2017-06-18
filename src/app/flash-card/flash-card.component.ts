@@ -26,6 +26,8 @@ export class FlashCardComponent implements OnInit, OnDestroy {
   cardsToStudy: Card[];
   currentCardIndex: number;
   isFlipped: boolean = false;
+  isNotAnimating: boolean = false;
+  isFadeOut: boolean = false;
 
   private sub: any;
   private currentURL: string;
@@ -83,7 +85,11 @@ export class FlashCardComponent implements OnInit, OnDestroy {
    */
   nextCard() {
     // First, set the front of the card to be viewed.
+    this.isNotAnimating = true;
+    this.isFadeOut = true;
     this.isFlipped = false;
+
+
     if ((this.currentCardIndex + 1) >= this.cardsToStudy.length) {
       this.currentCardIndex = 0;
       // TODO Notify user that we are looping
@@ -92,6 +98,9 @@ export class FlashCardComponent implements OnInit, OnDestroy {
     }
 
     this.updateURLPath();
+
+    // Disable no animation after allowing DOM to update.
+    setTimeout(() => { this.isNotAnimating = false; this.isFadeOut = false; }, 50);
   }
 
   /**
@@ -101,7 +110,10 @@ export class FlashCardComponent implements OnInit, OnDestroy {
    */
   previousCard() {
     // First, set the front of the card to be viewed.
+    this.isNotAnimating = true;
+    this.isFadeOut = true;
     this.isFlipped = false;
+
     if (this.currentCardIndex <= 0) {
       this.currentCardIndex = this.cardsToStudy.length - 1;
       // TODO Notify user that we are looping back.
@@ -110,6 +122,9 @@ export class FlashCardComponent implements OnInit, OnDestroy {
       this.currentCardIndex--;
     }
     this.updateURLPath();
+
+    // Disable no animation after allowing DOM to update.
+    setTimeout(() => { this.isNotAnimating = false; this.isFadeOut = false; }, 50);
   }
 
   /**

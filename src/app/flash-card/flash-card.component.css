@@ -13,6 +13,11 @@
 
 .flip-container {
 	perspective: 1000px;
+
+	opacity: 1;
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
 }
 
 .card-container {
@@ -20,6 +25,11 @@
 	align-items: center;
 	justify-content: center;
 	width: 100%;
+}
+
+.fadeOut {
+	opacity: 0;
+	transition: opacity .0s ease-in-out;
 }
 
 /* flip the pane when hovered */
@@ -37,6 +47,10 @@
 	transition: 0.6s;
 	transform-style: preserve-3d;
 	position: relative;
+}
+
+.flipper.noanimate {
+	transition: 0s !important;
 }
 
 /* hide back of pane during swap */
