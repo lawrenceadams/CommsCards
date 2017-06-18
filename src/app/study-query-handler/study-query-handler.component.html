@@ -5,7 +5,7 @@
       <button class="button is-light has-text-left is-fullwidth wrap-override" [innerHTML]="card.title" (click)="logClick(i)" routerLink="/study/{{query}}/{{queryterm}}/card/{{i}}"></button>
     </div>
     <div *ngIf="cardsToStudy.length === 0" class="notification is-danger">
-      No cards of query <b>{{ query }} → {{ queryterm }}</b> were found in the card store. <span class="icon is-pulled-right"><i class="fa fa-exclamation-triangle"></i></span>
+      No cards were found under that selection (<b>{{ query }} → {{ queryterm }}</b>).<span class="icon is-pulled-right"><i class="fa fa-exclamation-triangle"></i></span>
     </div>
   </div>
 </section>
