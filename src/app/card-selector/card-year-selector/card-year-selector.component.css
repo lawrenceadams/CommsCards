@@ -1,3 +1,15 @@
 :host {
     display: block;
 }
+
+@media (max-width:800px) {
+    .section {
+        padding-top: 24px !important;
+    }
+}
+
+@media (max-width:800px) {
+    .section {
+        padding-top: 24px !important;
+    }
+}

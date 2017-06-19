@@ -1,0 +1,66 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "definitions": {},
+    "id": "http://example.com/example.json",
+    "items": {
+        "id": "/items",
+        "properties": {
+            "attributes": {
+                "id": "/items/properties/attributes",
+                "properties": {
+                    "CCP": {
+                        "id": "/items/properties/attributes/properties/CCP",
+                        "items": {
+                            "id": "/items/properties/attributes/properties/CCP/items",
+                            "type": "integer"
+                        },
+                        "type": "array"
+                    },
+                    "system": {
+                        "id": "/items/properties/attributes/properties/system",
+                        "items": {
+                            "id": "/items/properties/attributes/properties/system/items",
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "type": {
+                        "id": "/items/properties/attributes/properties/type",
+                        "type": "string"
+                    },
+                    "year": {
+                        "id": "/items/properties/attributes/properties/year",
+                        "maximum": 3,
+                        "minimum": 1,
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "type",
+                    "year"
+                ],
+                "type": "object"
+            },
+            "back": {
+                "id": "/items/properties/back",
+                "type": "string"
+            },
+            "front": {
+                "id": "/items/properties/front",
+                "type": "string"
+            },
+            "id": {
+                "id": "/items/properties/id",
+                "type": "integer"
+            }
+        },
+        "required": [
+            "front",
+            "attributes",
+            "id",
+            "back"
+        ],
+        "type": "object"
+    },
+    "type": "array"
+}
