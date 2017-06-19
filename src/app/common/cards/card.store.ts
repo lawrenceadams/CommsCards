@@ -454,5 +454,302 @@ export const FLASHCARDS: Card[] = [
         "CCP": [
             5
         ]
+    },
+    {
+        "id": 31,
+        "title": "Explain the risk of inheriting Huntington's Disease",
+        "front": "<p>Mr Smith has Huntington’s Disease, but his wife is unaffected</p>\n<p>Explain the risk of his children inheriting the disease</p>",
+        "back": "<p>Huntington's disease is inherited in an <b>autosomal dominant pattern</b>. Autosomal dominant is one of several ways that a trait or disorder can be passed down (inherited) through families. Autosomal dominant inheritance means that everyone who inherits the faulty gene eventually gets the disease. You have one normal copy and one faulty copy of the Huntington’s gene which means there is a 50% chance of you passing it on to your children. However, inheritance is down to chance and so it is impossible to determine exactly how many, if any of your children will inherit the condition.</p>\n<p>When we speak about genes, you have two for every single little bit about you, for example your eye colour, and it is the same with Huntington’s. One gene comes out on top and that is what decides whether or not you are effected. It depends what gene dad passes on as to whether or not your children get the Huntington’s gene. There’s a 50% chance that dad will pass on the Huntington’s gene and then 50% that he will pass the non-Huntington’s gene. That chance happens for each child and so this does not mean that half of the children in a family will have the disease. This just means that each pregnancy has a 50% chance that a child will be affected with Huntington’s.</p>",
+        "system": [
+            "neuro",
+            "psych"
+        ],
+        "type": "risk",
+        "year": 3,
+        "CCP": [
+            34
+        ]
+    },
+    {
+        "id": 32,
+        "title": "Give lifestyle advice to a pregnant lady",
+        "front": "<p>Give some lifestyle advice to the patient, a 27 year old pregnant lady</p>",
+        "back": "<p><b>Diet</b> –You should be taking folic acid supplements to reduce the risk of conditions such as spina bifida in your baby. You can buy this over the counter or get a prescription from your GP. You can also boost your dietary intake of folate by eating lots of green vegetables. Some ladies also find that they become low in iron during pregnancy and have problems with anaemia; eating lots of red meat, beans and eggs can help to build iron stores. You should avoid soft cheeses such as brie and blue cheese in pregnancy and also any uncooked meats.</p>\n<p><b>Alcohol/Smoking</b> – Best to avoid both alcohol and smoking as they can affect the baby and it’s development. Help with cutting down on these is available through your midwife, GP or chemist.</p>\n<p><b>Exercise</b> – Exercise is still important during pregnancy, yoga-like activities can be very good to keep you fit and healthy. Consulting your midwife about this is a good idea.</p>\n<p><b>Medication</b> – Some medications can affect your pregnancy; you should consult your GP if you normally take medicines to ensure that they are safe, this includes for long term conditions such as epilepsy, high blood pressure, diabetes or depression.</p>",
+        "system": [
+            "obgyn"
+        ],
+        "type": "healthpromo",
+        "year": 3,
+        "CCP": [
+            29,
+            57,
+            61
+        ]
+    },
+    {
+        "id": 33,
+        "title": "Give advice to prevent falls",
+        "front": "<p>Mr Jones, 79 y/o, has recently had a fall at home. Offer Mr Jones some advice to help prevent future falls.</p>",
+        "back": "<p>In addition to the below, there may be specific information to give the patient relating to the cause of their own fall; especially if it pertains to a medical condition rather than being mechanical</p>\n<ul>\n<li>Use walking aids such as walking sticks or a zimmer frame as directed</li>\n<li>Remove loose rugs and mats which could be a trip hazard</li>\n<li>Try to keep floors as clear as possible</li>\n<li>Avoid rising from chairs and beds too quickly, this could make you dizzy or put you off balance</li>\n<li>Always wear shoes or slippers with a gripped sole</li>\n<li>If you’ve been seen by a physiotherapist try to carry out the exercises they showed you to improve your leg strength</li>\n<li>Ask your GP to review any medication you are taking as you are maybe on to many medications and need some to be stopped.</li>\n<li>If you have poorly controlled pain, see your GP for advice</li>\n</ul>\n<p><i>NB: Lower limb strengthening and balance training is extremely important and physio referral should be considered for all those who have had a fall</i></p>",
+        "system": [
+            "age"
+        ],
+        "type": "healthpromo",
+        "year": 3,
+        "CCP": [
+            28,
+            4
+        ]
+    },
+    {
+        "id": 34,
+        "title": "Give travel advice to a 20y/o travelling to East Africa",
+        "front": "<p>Give health advice to Malcom, a 20 year old student, ahead of his six week summer holiday to East Africa</p>",
+        "back": "<p><i>Travel advice will differ depending upon the location, but should include:</i></p>\n<ul>\n<li>If you are travelling to a malarial region then malaria prevention (tablets) should be taken.</li>\n<li>You should also ensure you have relevant vaccinations in advance.</li>\n<li>Book a travel appointment in your GP practice/ a travel clinic for advice, malaria prevention prescription and vaccinations well before travel.</li>\n<li>Be aware that even common medicines may be difficult to find abroad (take own supply of regular medicines, paracetamol, ibuprofen, anti-diarrhoeal etc.)</li>\n<li>Practice safe sex to prevent sexually transmitted infections, remembering that barrier methods should always be used even in addition to oral contraceptives.</li>\n<li>Always drink bottled water and avoid drinking tap or well water</li>\n<li>Avoid using tap water for washing of foods or brushing teeth</li>\n<li>There is a higher risk of blood borne infection, keep all cuts cleaned and covered while away.</li>\n<li>Diarrhoea is common and often nothing to worry about but ensure you keep well hydrated if you do get diarrhoea.</li>\n<li>There is good travel information/ advice on fitfortravel.nhs.uk</li>\n</ul>",
+        "system": [
+            "microbio",
+            "pubhealth"
+        ],
+        "type": "healthpromo",
+        "year": 3,
+        "CCP": [
+            88,
+            42
+        ]
+    },
+    {
+        "id": 35,
+        "title": "Discuss addressing a Transgender patient",
+        "front": "<p>Your patient is dressed as a female but the patient’s name and gender on their medical record is Stephen (male)</p>\n<p>Discuss in pair how you will address this patient</p>",
+        "back": "<p>Stephen is most likely a transgender woman. A transgender woman is someone who was assigned male at birth but identifies and lives as a woman. They may be in a transitioning process. Transition includes some or all of the following personal, medical, and legal steps: telling one's family, friends, and co-workers; using a different name and new pronouns; dressing differently; changing one's name and/or sex on legal documents; hormone therapy; and possibly (though not always) one or more types of surgery.</p>\n<p>Helpful tips:</p>\n<ul>\n<li>Always check the patient’s identity and cross check any notes to ensure you have the right person</li>\n<li>Always use a transgender person's chosen name.</li>\n<li>Ask transgender people which pronoun they would like you to use e.g he or she</li>\n<li>If it is not possible to ask a transgender person which pronoun is preferred, use the pronoun that is consistent with the person's appearance and gender expression.</li>\n<li>If in any doubt, ask the patient how they would like to be addressed and what pronoun they would like you to use.</li>\n</ul>",
+        "system": [
+            "psych"
+        ],
+        "type": "typesofconsul",
+        "year": 3,
+        "CCP": [
+            10
+        ]
+    },
+    {
+        "id": 36,
+        "title": "Discuss the components of a 'Personal History'",
+        "front": "<p>In your pairs discuss the components of a personal history as part of a full psychiatric history</p>",
+        "back": "<p><b>Childhood</b> – Home life, siblings, parents, early years</p>\n<p><b>Educational</b> – Schooling, college, any issues at school</p>\n<p><b>Occupational</b> – Jobs, frequency, role, dismissals</p>\n<p><b>Sexual/Reproductive</b> – Children, age sexually active, no. of sexual partners</p>\n<p><b>Medical</b> – PMH, medications, hospital stays and investigations</p>\n<p><b>Social</b> – Current situation, friendships, family, pets, living situation at present</p>\n<p><b>Substances</b> – Current or past drug use, alcohol, smoking</p>\n<p><b>Forensics</b> – Charges, contact with police, convictions</p>",
+        "system": [
+            "psych"
+        ],
+        "type": "typesofconsul",
+        "year": 3,
+        "CCP": [
+            6,
+            7,
+            10,
+            18,
+            22,
+            15
+        ]
+    },
+    {
+        "id": 37,
+        "title": "Discuss the features of the MSE",
+        "front": "<p>In your pair discuss the features of a Mental State Examination</p>",
+        "back": "<p>Mental State Examination (MSE) is an important part of gathering information from a psychiatric consultation. It comprises the following:</p>\n<ul>\n<li>General Appearance – Age, gender, posture, dress, stigmata of disease</li>\n<li>Behaviour – Is it appropriate? Consider rapport and attitude</li>\n<li>Speech – Rate, articulation, vocabulary, volume, accent, latency</li>\n<li>Mood – Euthymic? Dysphoric? Apathetic? Euphoric?</li>\n<li>Affect – Reactive, flat or blunted?</li>\n<li>Thought – Process and content. Delusions? Obsessions?</li>\n<li>Perception – How does the patient view their self and their situation?</li>\n<li>Cognition – Memory, orientation, attention, calculation, language etc.</li>\n<li>Insight – The 4 As: Attribution, Awareness, Appraisal &amp; Acceptance</li>\n</ul>",
+        "system": [
+            "psych"
+        ],
+        "type": "typesofconsul",
+        "year": 3,
+        "CCP": [
+            6,
+            7,
+            10,
+            18,
+            22,
+            15,
+            68
+        ]
+    },
+    {
+        "id": 38,
+        "title": "Discuss how to manage an angry patient",
+        "front": "<p>In your pairs discuss how to deal with the following:</p>\n<p><i>‘Mr Smith has an appointment to see you at 2pm, it is now 2.30pm and he has just been called from the waiting room. He is angry that he may now be late for his next meeting’</i></p>",
+        "back": "The <b>Three R’s</b> framework is a good way to recall dispute resolution:\n<ul>\n<li><b class=\"danger-text\">Regret</b> – Express your sincere apologies for the situation having arisen <br><i>“I recognise that you have had to wait longer than expected and I am very sorry for that – I am running a little later than normal today”.</p></i></li>\n<li><b class=\"danger-text\">Reason</b> – Explain why this has arisen, but without appearing defensive or abrupt <br><i>“The clinic has had several unwell patients that I have had to spend a little more time with than I had anticipated, unfortunately this could not have been foreseen”</i></li>\n<li><b class=\"danger-text\">Remedy</b> – Offer some solution to the problem, offer to investigate or offer a feedback opportunity<br><i>“If you still have time I can see you now and hopefully help you feel better. If not I can put you in touch with our appointments team who can arrange a more suitable time for you. If you want to make a formal complaint to the Practice about your wait today I can give you information about our complaints policy. Once again, my sincere apologies.”</i></li>\n</ul>",
+        "system": [
+            ""
+        ],
+        "type": "typesofconsul",
+        "year": 3,
+        "CCP": [
+            0
+        ]
+    },
+    {
+        "id": 39,
+        "title": "Discuss the process of Breaking Bad News",
+        "front": "<p>In your pair discuss the process for breaking bad news to a patient</p>",
+        "back": "<p>Breaking bad news is a very individualised process and depends on the patient and their situation. Although there is no single way to break bad news the following guide (Buckman Framework) can be used to provide a framework from which to work.</p>\n<ul>\n<li>Getting Started – Consider the physical context – quiet environment, no interruptions etc</li>\n<li>How much does the patient already know? Find out the background to the situation.</li>\n<li>How much does the patient want to know?</li>\n<li>Providing a warning shot e.g <i>“I’m afraid the results are not what we had hoped for”</i></li>\n<li>Sharing information – Give appropriate amounts of information. Chunking and checking is helpful to check the patient’s understanding.</li>\n<li>Respond to patient’s feelings sensitively – acknowledge the emotion you see displayed e.g <i>“I can see you are upset, do you want to tell me what is going through your mind?”</i></li>\n<li>Planning and follow up – Shared decision making, coming up with a practical plan for patients around what will happen next.</li>\n</ul>",
+        "system": [
+            ""
+        ],
+        "type": "typesofconsul",
+        "year": 3,
+        "CCP": [
+            26
+        ]
+    },
+    {
+        "id": 40,
+        "title": "Explain the benefits and side effects of Warfarin",
+        "front": "<p>Mrs Wilkins (63 years old) has recently suffered a DVT and been commenced on Warfarin therapy</p>\n<p>Explain the benefits and possible side effects of Warfarin</p>",
+        "back": "<p>Warfarin is a blood thinning drug which is prescribed to help prevent further blood clots in people who have a previous history of developing them or who are at high risk of developing them. Examples of previous blood clots include a clot in your lungs or leg (pulmonary embolus or deep vein thrombosis). There are many conditions that increase the risk of getting clots.</p>\n<p>Some possible side effects of warfarin include: easy bruising, nosebleeds that last a long time, blood in vomit, spit, urine or stool.</p>\n<p>If you cut yourself badly the bleeding could be more serious when you are on warfarin, apply firm pressure and make sure you seek help quickly if it doesn’t stop. Sometimes people on warfarin suffer serious or life-threatening bleeding such in the brain or from the gut.</p>\n<p>This is why it is important that you have your blood monitored to check how effective it is at thinning your blood and to make sure it is not thinning it too much. This blood test is called an INR. When you first start warfarin you will have this test done very regularly, reducing to 4-6 weekly once you are established on the drug.</p>",
+        "system": [
+            "haem",
+            "cardio"
+        ],
+        "type": "explainplan",
+        "year": 3,
+        "CCP": [
+            5,
+            13,
+            112
+        ]
+    },
+    {
+        "id": 41,
+        "title": "Interpret a haematological blood test",
+        "front": "<p>Interpret the following blood results and explain the likely diagnosis and next steps to an asymptomatic 54y/o male</p>\n<ul>\n<li>Hb - 9 g/dL (12-18 g/dL)</li>\n<li>MCV - 70 fl (80-96 fl)</li>\n<li>MCH - 25 p/g (27-32 p/g)</li>\n</ul>",
+        "back": "<p>The most likely diagnosis is a microcytic anaemia, probably due to iron deficiency.</p>\n<p>Anaemia is the name given to a group of conditions whereby the red blood cells’ ability to carry oxygen is poorer than would normally be expected. There are several different causes of anaemia but the likelihood is that a lack of iron in your body has lead to these results; we call this a ‘microcytic anaemia’ which basically means that when looked at down a microscope, your red blood cells are quite small in size.</p>\n<p>One of the ways we can lose blood and not be aware of it is from our bowels. Therefore I would like to look in to this anaemia further for you if that’s okay? It would be useful to carry out another couple of blood tests to look in more detail at your iron levels. I would also like to refer you for an investigation which involves a camera or scope being passed in to your bowel through your bottom to look at the bowel in more detail. This will help identify any potential source of the blood loss. </p>\n<p><i>NB: In female patients of reproductive age heavy periods maybe the cause and is worth exploring</i></p>",
+        "system": [
+            "haem"
+        ],
+        "type": "interpret",
+        "year": 3,
+        "CCP": [
+            5,
+            86,
+            62,
+            71
+        ]
+    },
+    {
+        "id": 42,
+        "title": "Interpret a Trans-Vaginal US scan report",
+        "front": "<p>Interpret the following radiology report and explain the result to the patient who has had irregular periods</p>\n<p><i>‘Trans-vaginal ultrasound of this 35y/o lady with oligomenorrhoea showed bilateral enlarged ovaries with several follicles measuring 5-8mm in a pearl-string appearance’</i></p>",
+        "back": "<p><i>Radiology would suggest that the most likely diagnosis is Polycystic Ovarian Syndrome (PCOS).</i></p>\n<p>You’ll remember that we sent you for a scan of your pelvis. That scan was to allow us to have a look at your womb and your ovaries to see if we could explain the symptoms you have been having – mainly the infrequent irregular periods.</p>\n<p>From the scan we can see that you have quite a number of small sacks, called cysts, on your ovaries which might be affecting your ability to produce an egg; and that would explain why your periods haven’t been coming as regularly as we would expect. These cysts contain the developing egg but are unable to release the egg so normal ovulation and menstruation doesn’t take place.</p>\n<p>We can’t really say for sure why you have developed PCOS, which is the name given to this condition; although sometimes it does run in families, other times it occurs randomly. We can look at some options to help with your symptoms.</p>",
+        "system": [
+            "obgyn",
+            "radiol"
+        ],
+        "type": "interpret",
+        "year": 3,
+        "CCP": [
+            3
+        ]
+    },
+    {
+        "id": 43,
+        "title": "Discuss the important points of consent of surgical procedures",
+        "front": "<p>In your pair discuss the important points to consider when gaining consent for an invasive procedure</p>",
+        "back": "<p><b>Capacity</b></p>\n<ul>\n<li>Does the patient have capacity to consent to a procedure?</li>\n<li>Consider age (Gillick Competence), disease status, mental state, POA/Guardianship orders</li>\n</ul>\n<p><b>Information Giving</b></p>\n<ul>\n<li>Have I given the patient enough information to make a decision?</li>\n<li>Discuss alternative invasive and non-invasive options, and consequences thereof (if applicable)</li>\n<li>Discuss the risks of procedure and any anaesthetic required to undergo the procedure</li>\n<li>Ensure information is given in lay terms, understandable to the patient</li>\n<li>Risks vs benefits</li>\n<li>Nature of the procedure</li>\n<li>Recovery time</li>\n<li>Options which are available at other centres</li>\n</ul>\n<p>The above should all be discussed openly between doctor-patient to ensure a shared decision is made with the patient’s wishes and best interests in mind</p>",
+        "system": [
+            "ethlaw"
+        ],
+        "type": "consentproc",
+        "year": 3,
+        "CCP": [
+            64
+        ]
+    },
+    {
+        "id": 44,
+        "title": "Explain what an amniocentesis will entail",
+        "front": "<p>A 42y/o couple are having a baby and are being counselled for amniocentesis having been identified as high risk for Down’s Syndrome by blood test</p>\n<p>Explain what the amniocentesis will entail</p>",
+        "back": "<p><i>It is important for the couple to understand the process of amniocentesis and the potential risks associated with it so that they can give informed consent for the procedure (should they decide to go ahead).</i></p>\n<p>Amniocentesis is a test carried out during pregnancy which can assess whether the unborn baby (foetus) could develop, or has developed, an abnormality or serious health condition such as Down’s syndrome. It involves using a long fine needle which is inserted through the skin in your tummy in to the womb where the baby is growing. The needle will sample the fluid around the baby (known as the amniotic fluid) so that the cells can be examined. Amniotic fluid contains cells shed from the foetus that can be examined and tested for a number of conditions.</p>\n<p>The main risk of this procedure is miscarriage, which is estimated to happen to 1 in every 100 ladies who undergo the procedure. Because of this risk it is really important to consider if the result of the amniocentesis will affect your decision to proceed with the pregnancy and the reasons for going ahead with the procedure. Other less common side effects include a bacterial infection.</p>",
+        "system": [
+            "obgyn"
+        ],
+        "type": "explainplan",
+        "year": 3,
+        "CCP": [
+            34,
+            35,
+            66
+        ]
+    },
+    {
+        "id": 45,
+        "title": "Explain the preparation for a PV exam and Smear test",
+        "front": "<p>Explain to a young female patient how you would like her to prepare for an internal vaginal examination</p>",
+        "back": "<p><b>Before</b></p>\n<ul>\n<li>Ensure that informed consent is gained – including for chaperone</li>\n<li>Ask the patient if she needs to empty her bladder</li>\n<li>Show her where the clinical waste bin is in case she needs to dispose of any sanitary products</li>\n<li>Explain how patient should prepare and undress</li>\n</ul>\n<p><i>“Please remove everything on your bottom half and lie on the examination couch with your head on the pillow. Use the sheet of paper I’ve left out to cover yourself until you are ready for me to come in. Let me know when you are ready.”</i></p>\n<p><b>Positioning</b></p>\n<ul>\n<li>Describe to the patient how to position herself and how to maintain her modesty</li>\n<li>Explain again what you need to do and why you are doing it</li>\n</ul>\n<p><i>“Please bring your heels up towards your bottom and let your knees fall apart.”</i></p>\n<p><b>Afterwards</b></p>\n<p><i>“Please use the paper towel on the bed to wipe yourself if need be and dispose of it in the bin beside you. I'll leave you to get organised and put your clothes back on.”</i></p>",
+        "system": [
+            "obgyn"
+        ],
+        "type": "consentproc",
+        "year": 3,
+        "CCP": [
+            64
+        ]
+    },
+    {
+        "id": 46,
+        "title": "Explain what an ectopic pregnancy is",
+        "front": "<p>A young lady has presented with abdominal pain and is diagnosed with an ectopic pregnancy</p>\n<p>Explain to the patient what this means</p>",
+        "back": "<p>Normally a fertilised egg should become nestled within the walls of the womb and begin to grow here. In an ectopic pregnancy the egg hasn’t travelled to the correct location after fertilisation and has instead implanted elsewhere, usually within one of the tubes called fallopian tubes.</p>\n<p>Unfortunately, this means that the fertilised egg will never grow or develop properly, usually because the space for the developing baby to grow is restricted. An ectopic pregnancy can be dangerous for you as if the baby starts to grow in a small space, such as the tubes connecting the ovaries and the womb, then it may lead to the tubes bursting. For this reason we need consider treatment options to prevent the fertilised egg continuing to develop.</p>\n<p><i>NB: Some women will want to know if an ectopic pregnancy will affect their chance of having a successful pregnancy in the future. Your chances of having a further successful pregnancy will depend on the underlying health of your fallopian tubes. In general however 65% of women achieve a successful pregnancy 18 months after having an ectopic pregnancy.</i></p>",
+        "system": [
+            "obgyn"
+        ],
+        "type": "explaindisease",
+        "year": 3,
+        "CCP": [
+            61,
+            3,
+            2
+        ]
+    },
+    {
+        "id": 47,
+        "title": "Explain the difference between a haemorrhagic and ischaemic stroke",
+        "front": "<p>Explain the difference between a haemorrhagic stroke and an ischaemic stroke to a patient</p>",
+        "back": "<p>A stroke can be caused by either a clot or bleeding within the head. If there is a clot then the blood supplying the brain is compromised as the clot blocks the tube (known as an artery); this means that there will be no blood, hence no oxygen, to that part of the brain and it will start to lose the ability to work correctly. This type of stroke is more likely if you suffer from other medical conditions such as atrial fibrillation, high blood pressure or diabetes; therefore it is important that you make sure that you get these conditions treated by your doctor.</p>\n<p>Alternatively, a stroke maybe the result of a collection of blood pressing on the brain, which normally occurs because a weakened blood vessel has burst or is leaking. This has the same effect as the clot, as the pressure stops blood flowing properly within the tubes (arteries) and cuts off the oxygen supply to this part of the brain.</p>",
+        "system": [
+            "neuro"
+        ],
+        "type": "explaindisease",
+        "year": 3,
+        "CCP": [
+            32,
+            17
+        ]
+    },
+    {
+        "id": 48,
+        "title": "Explain what Epilepsy is and the effect it has on driving",
+        "front": "<p>Explain epilepsy to the patient in lay terms and what this means for their lifestyle in terms of driving</p>",
+        "back": "<p>The brain is made up of lots of cells called neurones which send electrical messages to one another. In epilepsy these signals are sent in a random order which disrupts the brain’s normal activity and causes unusual symptoms such as seizures or fits.</p>\n<p><i>DVLA Rules for driving are as follows:</i></p>\n<ul>\n<li>You must not drive for 1 year following a seizure which happened when awake</li>\n<li>The above rule is extended to 3 years if the seizure happened when asleep</li>\n<li>It is the patient’s responsibility to inform the DVLA, this is a legal requirement</li>\n<li>Failure to inform the DVLA means that your doctor may be forced to do so</li>\n<li>The rules are slightly stricter for those driving larger vehicles (buses, lorries etc.)</li>\n</ul>\n<p><i>NB: The DVLA website or www.epilepsysociety.org.uk provide more specific information including leaflets which may be helpful for patients.</i></p>",
+        "system": [
+            "neuro",
+            "ethlaw"
+        ],
+        "type": "explaindisease",
+        "year": 3,
+        "CCP": [
+            17
+        ]
+    },
+    {
+        "id": 49,
+        "title": "Discuss the parts of a Sexual History",
+        "front": "<p>In your pairs discuss the main components of a sexual history</p>",
+        "back": "<p>A sexual history should be taken in conjunction with a full normal medical history and should include the following:</p>\n<ul>\n<li>Present sexual activity (Are they sexually active? What type of intercourse?)</li>\n<li>Number of sexual partners at present</li>\n<li>Life time sexual partners</li>\n<li>BBV/HIV risk assessment (IVDU, HIV positive partners)</li>\n<li>Red flags (Sex abroad, men who have sex with men, non-consensual)</li>\n<li>Contraceptive history (What has been used? Barrier and other?)</li>\n<li>Menstrual history (Menarche, any problems, regularity of periods)</li>\n<li>Previous pregnancies and terminations</li>\n<li>Cervical smear history</li>\n</ul>",
+        "system": [
+            "obgyn"
+        ],
+        "type": "typesofconsul",
+        "year": 3,
+        "CCP": [
+            29,
+            73
+        ]
     }
 ];
