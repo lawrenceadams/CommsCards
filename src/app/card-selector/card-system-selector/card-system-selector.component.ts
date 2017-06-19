@@ -13,12 +13,13 @@ export class CardSystemSelectorComponent implements OnInit {
   @HostBinding('@routeFadeState') routeAnimation = true;
 
   systemOptions: MenuOption[] = [
-    new MenuOption("Principles", "/study/system/principles"),
+    new MenuOption("Principles", "/study/system/princ"),
     new MenuOption("Respiratory", "/study/system/resp"),
     new MenuOption("Cardiovascular", "/study/system/cvs"),
     new MenuOption("Gastrointestinal", "/study/system/gi"),
     new MenuOption("Dermatology", "/study/system/derm"),
-    new MenuOption("Muskuloskeletal", "/study/system/msk"),
+    // new MenuOption("Muskuloskeletal", "/study/system/msk"), 
+    // NO MSK CARDS CCURENTLY IN STORE.
     new MenuOption("Endocrine", "/study/system/endo"),
     new MenuOption("Child and Family", "/study/system/paeds"),
   ]
