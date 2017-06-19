@@ -1,13 +1,35 @@
 <nav class="nav has-shadow">
-  <div class="nav-left">
+  <div class="nav-left" *ngIf="!isStudying; else studyNavBar">
     <a class="nav-item" [routerLink]="['/home']">Home</a>
     <a class="nav-item" [routerLink]="['/about']">About</a>
     <a class="nav-item" [routerLink]="['/legal']">Legal</a>
   </div>
-  <div class="nav-right">
-    <span class="nav-item is-hidden-mobile"><h3 style="color: blueviolet;">EVS Comms Skills App</h3></span>
-  </div>
-
+  <ng-template #studyNavBar>
+    <div class="nav-center">
+      <a class="nav-item nav-item-padded" (click)="sendMessage('previous')">
+        <span class="icon">
+          <i class="fa fa-arrow-left"></i>
+        </span>
+    </a>
+      <a class="nav-item nav-item-padded" routerLink="home">
+        <span class="icon">
+          <i class="fa fa-home"></i>
+        </span>
+    </a>
+      <a class="nav-item nav-item-padded" [routerLink]="queryMenuUrl">
+        <span class="icon">
+          <i class="fa fa-level-up"></i>
+        </span>
+    </a>
+      <a class="nav-item nav-item-padded" (click)="sendMessage('next')">
+        <span class="icon">
+          <i class="fa fa-arrow-right"></i>
+        </span>
+      </a>
+    </div>
+  </ng-template>
 </nav>
 
-<router-outlet></router-outlet>
+<div style="padding-top: 3rem !important;">
+  <router-outlet></router-outlet>
+</div>

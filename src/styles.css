@@ -4,3 +4,25 @@
 .box-evs {
     max-width: 700px !important;
 }
+
+@media (min-width:801px)  { 
+    .box-no-mobile {
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+        display: block;
+        padding: 1.25rem;
+    }
+}
+
+.g-mozfix {
+    white-space: inherit ! important;
+}
+
+/*
+    Fixes weird margins below 1000px width.
+    Overrides Bulma original
+*/
+.container {
+    margin: 0 auto;
+}

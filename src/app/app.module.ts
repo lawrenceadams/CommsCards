@@ -5,7 +5,7 @@ import { HashLocationStrategy, LocationStrategy } from "@angular/common";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { AppComponent } from './app.component';
-import { CardProviderService } from './card-provider.service';
+import { CardProviderService } from './common/services/card-provider.service';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { LegalComponent } from './legal/legal.component';
@@ -16,18 +16,22 @@ import { CardSystemSelectorComponent } from './card-selector/card-system-selecto
 import { CardTypeSelectorComponent } from './card-selector/card-type-selector/card-type-selector.component';
 import { StudyQueryHandlerComponent } from './study-query-handler/study-query-handler.component';
 import { MenuBuilderComponent } from './common/menu-builder/menu-builder.component';
+import { FlashCardComponent } from './flash-card/flash-card.component';
+import { MessageService } from "./common/services/messenger.service";
+import { SafeHTMLPipe } from "./common/pipes/htmlSanitizerBypass.pipe";
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: "full" },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'legal', component: LegalComponent },
-  { path: 'studyby', component: CardSelectorComponent },
-  { path: 'studyby/year', component: CardYearSelectorComponent },
-  { path: 'studyby/system', component: CardSystemSelectorComponent },
-  { path: 'studyby/type', component: CardTypeSelectorComponent },
+  { path: 'study', component: CardSelectorComponent },
+  { path: 'study', redirectTo: 'study', pathMatch: "full" },
+  { path: 'study/year', component: CardYearSelectorComponent },
+  { path: 'study/system', component: CardSystemSelectorComponent },
+  { path: 'study/type', component: CardTypeSelectorComponent },
   { path: 'study/:query/:queryterm', component: StudyQueryHandlerComponent },
-  { path: 'study', redirectTo: 'studyby', pathMatch: "full" }
+  { path: 'study/:query/:queryterm/card/:id', component: FlashCardComponent }
 ]
 
 @NgModule({
@@ -41,7 +45,9 @@ const routes: Routes = [
     CardSystemSelectorComponent,
     CardTypeSelectorComponent,
     StudyQueryHandlerComponent,
-    MenuBuilderComponent
+    MenuBuilderComponent,
+    FlashCardComponent,
+    SafeHTMLPipe
   ],
   imports: [
     BrowserModule,
@@ -50,6 +56,7 @@ const routes: Routes = [
   ],
   providers: [
     CardProviderService,
+    MessageService,
     { provide: LocationStrategy, useClass: HashLocationStrategy } // Comment this out for non hash based routing
   ],
   bootstrap: [AppComponent]

@@ -30,3 +30,11 @@ gulp.task('deploybuild', function () {
         domain: "evsng.surge.sh"
     });
 });
+
+gulp.task('sl', function (cb) {
+    exec('ng s --host 0.0.0.0 --disable-host-check', function (err, stdout, stderr) {
+        console.log(stdout);
+        console.log(stderr);
+        cb(err);
+    });
+});

@@ -5,13 +5,31 @@
 button {
     text-align: left;
     display: inline-block !important;
-    line-height: unset; /* Fixes strage floating text when adding icon is-pulled-right */
-}
-
-ul li {
-    list-style: none;
+    line-height: unset;  /* Fixes strange floating text when adding icon is-pulled-right */
 }
 
 .field button {
     margin-top: 10px;
+}
+
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width:801px)  { 
+    img {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .box-evs {
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+        display: block;
+        padding: 1.25rem;
+    }
+}
+
+/* -moz fix */
+button > span {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
