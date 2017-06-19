@@ -11,6 +11,53 @@
   overflow: hidden;
 }
 
+:host /deep/ .back li {
+	padding: 0px 30px 0px 20px
+}
+
+:host /deep/ .back ol {
+	list-style-type: decimal;
+	margin-left: 1.2em;
+}
+
+:host /deep/ .back ol li {
+	list-style-type: decimal;
+    list-style-position: inside;
+}
+
+:host /deep/ .danger-text li b {
+	color: #ff6264;
+	font-weight: 600;
+}
+/* TESTING*/
+
+:host /deep/ ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1.2em;
+	padding-top: 1.2em;
+    text-indent: -1.2em;
+}
+
+:host /deep/ ul > li:before {
+    content: "●";
+    display: block;
+    float: left;
+    width: 1.2em;
+    /*color: ;*/
+}
+
+/* END TESTING*/
+
+:host /deep/ .front li {
+	text-align: left !important;
+}
+
+:host /deep/ .back ol, .back ul {
+	padding-top: 15px;
+	/*padding-bottom: 15px;*/
+}
+
 .flip-container {
 	perspective: 1000px;
 
