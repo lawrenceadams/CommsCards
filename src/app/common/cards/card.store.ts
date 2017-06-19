@@ -383,7 +383,11 @@ export const FLASHCARDS: Card[] = [
     {
         "id": 26,
         "title": "Give the likely treatment options for a Melanoma",
+<<<<<<< HEAD
+        "front": "<p>72y/o gentleman with 1.5cm nasal skin lesion. He is aware of the diagnosis.</p><p>Explain the likely treatment options.</p><img class='image' style='max-width: 300px; width: 80%; margin-top:20px; border-radius:10px;'src='./assets/images/card_images/derm_melanoma.jpg'></img>",
+=======
         "front": "<p>72y/o gentleman with 1.5cm nasal skin lesion. He is aware of the diagnosis. Explain the likely treatment options.</p>",
+>>>>>>> master
         "back": "<p><i>It is important to note that histology, examination and history should all be considered here. However, based on examination alone this is likely to be a malignant melanoma.</i></p><p>As you know, we suspect that this growth maybe a cancerous mole however it is impossible to say exactly which type or how bad this is without further tests. In the first instance, we would like to refer you to see the skin specialist who will be able to do a few more tests and work out the best way forward.</p><p>However, the most likely scenario is that the skin specialist will decide to remove the mole, usually while you are still awake. They would do this by injecting some local anaesthetic which will numb the skin and then cutting the mole out. Now, because of the size of the mole it might be that some skin needs to be taken from elsewhere on your body and used to patch up the area of skin removed; but this will all be discussed with you at the time of the operation so don’t worry about it too much as there will be plenty of opportunities to ask questions and discuss things before any action is taken.</p>",
         "system": [
             "derm"
