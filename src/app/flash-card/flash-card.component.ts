@@ -90,9 +90,12 @@ export class FlashCardComponent implements OnInit, OnDestroy {
     this.isFlipped = false;
 
 
-    if ((this.currentCardIndex + 1) >= this.cardsToStudy.length) {
+    if ((this.currentCardIndex + 1) === this.cardsToStudy.length) {
       this.currentCardIndex = 0;
       // TODO Notify user that we are looping
+    } else if (this.currentCardIndex > this.cardsToStudy.length) {
+      console.warn("This is strange. Resetting currentCardIndex to 0");
+      this.currentCardIndex = 0;
     } else {
       this.currentCardIndex++;
     }
