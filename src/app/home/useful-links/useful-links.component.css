@@ -1,0 +1,13 @@
+button {
+    text-align: left;
+    display: inline-block !important;
+    line-height: unset; /* Fixes strage floating text when adding icon is-pulled-right */
+}
+
+ul li {
+    list-style: none;
+}
+
+.field button {
+    margin-top: 10px;
+}

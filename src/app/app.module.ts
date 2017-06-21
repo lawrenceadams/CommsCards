@@ -19,12 +19,14 @@ import { MenuBuilderComponent } from './common/menu-builder/menu-builder.compone
 import { FlashCardComponent } from './flash-card/flash-card.component';
 import { MessageService } from "./common/services/messenger.service";
 import { SafeHTMLPipe } from "./common/pipes/htmlSanitizerBypass.pipe";
+import { UsefulLinksComponent } from './home/useful-links/useful-links.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: "full" },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'legal', component: LegalComponent },
+  { path: 'links', component: UsefulLinksComponent },
   { path: 'study', component: CardSelectorComponent },
   { path: 'study', redirectTo: 'study', pathMatch: "full" },
   { path: 'study/year', component: CardYearSelectorComponent },
@@ -47,7 +49,8 @@ const routes: Routes = [
     StudyQueryHandlerComponent,
     MenuBuilderComponent,
     FlashCardComponent,
-    SafeHTMLPipe
+    SafeHTMLPipe,
+    UsefulLinksComponent
   ],
   imports: [
     BrowserModule,
