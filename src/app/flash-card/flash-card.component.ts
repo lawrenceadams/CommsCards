@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding, EventEmitter, OnDestroy } from '@angular/core';
+import { Component, OnInit, HostBinding, EventEmitter, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { Location } from "@angular/common";
 import { Subscription } from "rxjs";
@@ -18,6 +18,7 @@ import { SafeHTMLPipe } from "../common/pipes/htmlSanitizerBypass.pipe";
 
 export class FlashCardComponent implements OnInit, OnDestroy {
   @HostBinding('@routeFadeState') routeAnimation = true;
+  @ViewChild('backDiv') private backDiv: ElementRef;
 
   subscription: Subscription;
 
@@ -143,6 +144,10 @@ export class FlashCardComponent implements OnInit, OnDestroy {
 
     this.currentURL = strippedURL.join('/');
     this.location.go(this.currentURL);
+
+    // Scroll to top of new card
+    // Called here as next/prev card calls updateURLPath();
+    this.scrollToBottom();
   }
 
   /**
@@ -150,5 +155,17 @@ export class FlashCardComponent implements OnInit, OnDestroy {
    */
   toggleFlip() {
     this.isFlipped = !this.isFlipped;
+  }
+
+  /**
+   * Scroll to top of card on next/prev card press
+   * @returns {void}
+   */
+  scrollToBottom(): void {
+    try {
+      this.backDiv.nativeElement.scrollTop = 0;
+    } catch (err) {
+      console.error(err);
+    }
   }
 }
