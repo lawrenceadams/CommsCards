@@ -1,5 +1,6 @@
 <nav class="nav has-shadow">
   <div class="nav-left" *ngIf="!isStudying; else studyNavBar">
+    <span class="nav-item" style="padding: 0px 0.5rem 0px 0.5rem"><img src="./assets/images/uod-logo-stacked.svg" alt=""></span>
     <a class="nav-item" [routerLink]="['/home']">Home</a>
     <a class="nav-item" [routerLink]="['/about']">About</a>
     <a class="nav-item" [routerLink]="['/legal']">Legal</a>
