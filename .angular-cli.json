@@ -21,7 +21,8 @@
       "styles": [
         "styles.css",
         "../node_modules/bulma/css/bulma.css",
-        "../node_modules/font-awesome/css/font-awesome.min.css"
+        "../node_modules/font-awesome/css/font-awesome.min.css",
+        "./assets/fonts/med-icons.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
