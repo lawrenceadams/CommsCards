@@ -20,6 +20,8 @@ import { FlashCardComponent } from './flash-card/flash-card.component';
 import { MessageService } from "./common/services/messenger.service";
 import { SafeHTMLPipe } from "./common/pipes/htmlSanitizerBypass.pipe";
 import { UsefulLinksComponent } from './home/useful-links/useful-links.component';
+import { OsceMenuComponent } from './osce/osce-menu/osce-menu.component';
+import { OsceScenarioViewerComponent } from './osce/osce-scenario-viewer/osce-scenario-viewer.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: "full" },
@@ -32,6 +34,8 @@ const routes: Routes = [
   { path: 'study/year', component: CardYearSelectorComponent },
   { path: 'study/system', component: CardSystemSelectorComponent },
   { path: 'study/type', component: CardTypeSelectorComponent },
+  { path: 'study/osce', component: OsceMenuComponent },
+  { path: 'study/osce/:id', component: OsceScenarioViewerComponent },
   { path: 'study/:query/:queryterm', component: StudyQueryHandlerComponent },
   { path: 'study/:query/:queryterm/card/:id', component: FlashCardComponent }
 ]
@@ -50,7 +54,9 @@ const routes: Routes = [
     MenuBuilderComponent,
     FlashCardComponent,
     SafeHTMLPipe,
-    UsefulLinksComponent
+    UsefulLinksComponent,
+    OsceMenuComponent,
+    OsceScenarioViewerComponent
   ],
   imports: [
     BrowserModule,
