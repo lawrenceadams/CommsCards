@@ -1,3 +1,37 @@
-<p>
-  osce-scenario-viewer works!
-</p>
+<section class="section">
+  <!-- Scenario Section Selector-->
+  <div class="subtitle" [innerHTML]="OSCES[id].title"></div>
+  <div class="tabs is-boxed is-centered">
+    <ul>
+      <li [class.is-active]="activeView === 'question'">
+        <a (click)="setActiveView('question')">
+      <span class="icon is-small"><i class="fa fa-question"></i></span>
+      <span>Question</span>
+    </a>
+      </li>
+      <li [class.is-active]="activeView === 'script'">
+        <a (click)="setActiveView('script')">
+      <span class="icon is-small"><i class="fa fa-comment"></i></span>
+      <span>Patient Script</span>
+    </a>
+      </li>
+      <li [class.is-active]="activeView === 'expectations'">
+        <a (click)="setActiveView('expectations')">
+      <span class="icon is-small"><i class="fa fa-check"></i></span>
+      <span>Examiner Expectations</span>
+    </a>
+      </li>
+    </ul>
+  </div>
+  <!-- VIEW -->
+  <div *ngIf="activeView === 'question'">
+    <div class="question" [innerHTML]="OSCES[id].question"></div>
+  </div>
+  <div *ngIf="activeView === 'script'">
+    <div class="script" [innerHTML]="OSCES[id].script"></div>
+  </div>
+  <div *ngIf="activeView === 'expectations'">
+    <div class="expectations" [innerHTML]="OSCES[id].expectations"></div>
+  </div>
+  <!-- /VIEW -->
+</section>

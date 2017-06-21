@@ -3,21 +3,21 @@
     <span class="subtitle">Year 1</span>
     <div class="field">
       <div *ngFor="let option of filteredScenarios.year1">
-        <button class="button is-medium is-light has-text-left is-fullwidth g-mozfix" routerLink="{{study/osce/option.id}}" [innerHTML]="option.title">
+        <button class="button is-medium is-light has-text-left is-fullwidth g-mozfix" [routerLink]="'/study/osce/' + option.id" [innerHTML]="option.title">
       </button>
       </div>
     </div>
     <span class="subtitle">Year 2</span>
     <div class="field">
       <div *ngFor="let option of filteredScenarios.year2">
-        <button class="button is-medium is-light has-text-left is-fullwidth g-mozfix" routerLink="{{study/osce/option.id}}" [innerHTML]="option.title">
+        <button class="button is-medium is-light has-text-left is-fullwidth g-mozfix" [routerLink]="'/study/osce/' + option.id" [innerHTML]="option.title">
       </button>
       </div>
     </div>
     <span class="subtitle">Year 3</span>
     <div class="field">
       <div *ngFor="let option of filteredScenarios.year3">
-        <button class="button is-medium is-light has-text-left is-fullwidth g-mozfix" routerLink="{{study/osce/option.id}}" [innerHTML]="option.title">
+        <button class="button is-medium is-light has-text-left is-fullwidth g-mozfix" [routerLink]="'/study/osce/' + option.id" [innerHTML]="option.title">
       </button>
       </div>
     </div>
