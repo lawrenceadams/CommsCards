@@ -1,7 +1,26 @@
 <section class="section">
   <!-- Scenario Section Selector-->
   <div class="subtitle" [innerHTML]="OSCES[id].title"></div>
-  <div class="tabs is-boxed is-centered">
+  <div class="tile is-ancestor">
+    <div class="tile is-parent custom-tab-menu">
+      <a (click)="setActiveView('question')">
+        <div class="tile is-child button is-danger custom-tab-item" [class.is-active]="activeView === 'question'">Question <span class="icon is-small"><i class="fa fa-question"></i></span>
+        </div>
+      </a>
+      <a (click)="setActiveView('script')">
+        <div class="tile is-child button is-success custom-tab-item" style="border-radius: 0px" [class.is-active]="activeView === 'script'">Script
+          <span class="icon is-small"><i class="fa fa-comment"></i></span>
+        </div>
+      </a>
+      <a (click)="setActiveView('expectations')">
+        <div class="tile is-child button is-dark custom-tab-item" [class.is-active]="activeView === 'expectations'">Expectations
+          <span class="icon is-small"><i class="fa fa-check"></i></span>
+        </div>
+      </a>
+    </div>
+  </div>
+  <!---->
+  <!--<div class="tabs is-boxed is-centered">
     <ul>
       <li [class.is-active]="activeView === 'question'">
         <a (click)="setActiveView('question')">
@@ -22,7 +41,7 @@
     </a>
       </li>
     </ul>
-  </div>
+  </div>-->
   <!-- VIEW -->
   <div *ngIf="activeView === 'question'">
     <div class="question" [innerHTML]="OSCES[id].question"></div>
