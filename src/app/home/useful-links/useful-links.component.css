@@ -1,3 +1,13 @@
+:host {
+    display: block;
+}
+
+@media (max-width:800px) {
+    .section {
+        padding-top: 24px !important;
+    }
+}
+
 button {
     text-align: left;
     display: inline-block !important;
