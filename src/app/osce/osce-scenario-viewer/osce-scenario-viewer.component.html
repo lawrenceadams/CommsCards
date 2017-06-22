@@ -1,27 +1,23 @@
 <section class="section">
   <!-- Scenario Section Selector-->
-  <div class="subtitle" [innerHTML]="OSCES[id].title"></div>
-  <div class="tabs is-boxed is-centered">
-    <ul>
-      <li [class.is-active]="activeView === 'question'">
-        <a (click)="setActiveView('question')">
-      <span class="icon is-small"><i class="fa fa-question"></i></span>
-      <span>Question</span>
-    </a>
-      </li>
-      <li [class.is-active]="activeView === 'script'">
-        <a (click)="setActiveView('script')">
-      <span class="icon is-small"><i class="fa fa-comment"></i></span>
-      <span>Patient Script</span>
-    </a>
-      </li>
-      <li [class.is-active]="activeView === 'expectations'">
-        <a (click)="setActiveView('expectations')">
-      <span class="icon is-small"><i class="fa fa-check"></i></span>
-      <span>Examiner Expectations</span>
-    </a>
-      </li>
-    </ul>
+  <div class="title is-4" [innerHTML]="OSCES[id].title"></div>
+  <div class="tile is-ancestor">
+    <div class="tile is-parent custom-tab-menu">
+      <a (click)="setActiveView('question')">
+        <div class="tile is-child custom-tab-item top-item" [class.is-active]="activeView === 'question'">Question <span class="icon is-small"><i class="fa fa-question"></i></span>
+        </div>
+      </a>
+      <a (click)="setActiveView('script')">
+        <div class="tile is-child custom-tab-item mob-middle-tab" [class.is-active]="activeView === 'script'">Script
+          <span class="icon is-small"><i class="fa fa-comment"></i></span>
+        </div>
+      </a>
+      <a (click)="setActiveView('expectations')">
+        <div class="tile is-child custom-tab-item last-item" [class.is-active]="activeView === 'expectations'">Expectations
+          <span class="icon is-small"><i class="fa fa-check"></i></span>
+        </div>
+      </a>
+    </div>
   </div>
   <!-- VIEW -->
   <div *ngIf="activeView === 'question'">
