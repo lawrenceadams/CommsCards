@@ -1,0 +1,33 @@
+<section class="section">
+  <!-- Scenario Section Selector-->
+  <div class="title is-4" [innerHTML]="OSCES[id].title"></div>
+  <div class="tile is-ancestor">
+    <div class="tile is-parent custom-tab-menu">
+      <a (click)="setActiveView('question')">
+        <div class="tile is-child custom-tab-item top-item" [class.is-active]="activeView === 'question'">Question <span class="icon is-small"><i class="fa fa-question"></i></span>
+        </div>
+      </a>
+      <a (click)="setActiveView('script')">
+        <div class="tile is-child custom-tab-item mob-middle-tab" [class.is-active]="activeView === 'script'">Script
+          <span class="icon is-small"><i class="fa fa-comment"></i></span>
+        </div>
+      </a>
+      <a (click)="setActiveView('expectations')">
+        <div class="tile is-child custom-tab-item last-item" [class.is-active]="activeView === 'expectations'">Expectations
+          <span class="icon is-small"><i class="fa fa-check"></i></span>
+        </div>
+      </a>
+    </div>
+  </div>
+  <!-- VIEW -->
+  <div *ngIf="activeView === 'question'">
+    <div class="question" [innerHTML]="OSCES[id].question"></div>
+  </div>
+  <div *ngIf="activeView === 'script'">
+    <div class="script" [innerHTML]="OSCES[id].script"></div>
+  </div>
+  <div *ngIf="activeView === 'expectations'">
+    <div class="expectations" [innerHTML]="OSCES[id].expectations"></div>
+  </div>
+  <!-- /VIEW -->
+</section>

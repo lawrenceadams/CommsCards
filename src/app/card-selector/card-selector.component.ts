@@ -14,7 +14,8 @@ export class CardSelectorComponent implements OnInit {
   menuOptions: MenuOption[] = [
     new MenuOption("Study by Year", "/study/year"),
     new MenuOption("Study by System", "/study/system"),
-    new MenuOption("Study by Type", "/study/type")
+    new MenuOption("Study by Type", "/study/type"),
+    new MenuOption("OSCE Scenarios", "/study/osce/")
   ]
 
   constructor() { }
