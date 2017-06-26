@@ -1,5 +1,5 @@
 import { Component, OnInit, HostBinding, EventEmitter, OnDestroy, ViewChild, ElementRef } from '@angular/core';
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { Location } from "@angular/common";
 import { Subscription } from "rxjs";
 
@@ -35,6 +35,7 @@ export class FlashCardComponent implements OnInit, OnDestroy {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private service: CardProviderService,
     private messageService: MessageService,
     private location: Location
@@ -143,7 +144,8 @@ export class FlashCardComponent implements OnInit, OnDestroy {
     strippedURL.push(String(this.currentCardIndex));
 
     this.currentURL = strippedURL.join('/');
-    this.location.go(this.currentURL);
+    // this.location.go(this.currentURL);
+    this.router.navigateByUrl(this.currentURL);
 
     // Scroll to top of new card
     // Called here as next/prev card calls updateURLPath();
