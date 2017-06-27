@@ -1,6 +1,6 @@
 # Schema Information 
 
-#### _Version 1_
+#### _Version 2_
 
 This file describes the information that shall be used in the **official card database** (`common/cards/card.store.ts`).
 
@@ -45,6 +45,7 @@ Pharmacology | _n/a_ | `pharma`
 Ethics & Law | _n/a_ | `ethlaw` 
 General Practice | _n/a_ | `gp`
 Public Health | _n/a_ | `pubhealth`
+Radiology | _n/a_ | `radiol`
 
 
 ### Skill Type Keys

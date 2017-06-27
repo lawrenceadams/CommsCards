@@ -5,60 +5,62 @@
     "items": {
         "id": "/items",
         "properties": {
-            "attributes": {
-                "id": "/items/properties/attributes",
-                "properties": {
-                    "CCP": {
-                        "id": "/items/properties/attributes/properties/CCP",
-                        "items": {
-                            "id": "/items/properties/attributes/properties/CCP/items",
-                            "type": "integer"
-                        },
-                        "type": "array"
-                    },
-                    "system": {
-                        "id": "/items/properties/attributes/properties/system",
-                        "items": {
-                            "id": "/items/properties/attributes/properties/system/items",
-                            "type": "string"
-                        },
-                        "type": "array"
-                    },
-                    "type": {
-                        "id": "/items/properties/attributes/properties/type",
-                        "type": "string"
-                    },
-                    "year": {
-                        "id": "/items/properties/attributes/properties/year",
-                        "maximum": 3,
-                        "minimum": 1,
-                        "type": "integer"
-                    }
+            "CCP": {
+                "id": "/items/properties/CCP",
+                "items": {
+                    "id": "/items/properties/CCP/items",
+                    "type": "integer"
                 },
-                "required": [
-                    "type",
-                    "year"
-                ],
-                "type": "object"
+                "type": "array"
             },
             "back": {
                 "id": "/items/properties/back",
+                "title": "",
                 "type": "string"
             },
             "front": {
                 "id": "/items/properties/front",
+                "title": "",
                 "type": "string"
             },
             "id": {
                 "id": "/items/properties/id",
+                "title": "",
+                "type": "integer"
+            },
+            "system": {
+                "id": "/items/properties/system",
+                "items": {
+                    "id": "/items/properties/system/items",
+                    "type": "string"
+                },
+                "type": "array"
+            },
+            "title": {
+                "description": "Will be used when selecting the desired card",
+                "id": "/items/properties/title",
+                "title": "",
+                "type": "string"
+            },
+            "type": {
+                "description": "",
+                "id": "/items/properties/type",
+                "title": "",
+                "type": "string"
+            },
+            "year": {
+                "id": "/items/properties/year",
+                "title": "",
                 "type": "integer"
             }
         },
         "required": [
+            "title",
+            "back",
+            "year",
             "front",
-            "attributes",
-            "id",
-            "back"
+            "type",
+            "id"
         ],
         "type": "object"
     },
