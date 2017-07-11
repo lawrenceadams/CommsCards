@@ -20,14 +20,16 @@
     </div>
   </div>
   <!-- VIEW -->
-  <div *ngIf="activeView === 'question'">
-    <div class="question" [innerHTML]="OSCES[id].question"></div>
-  </div>
-  <div *ngIf="activeView === 'script'">
-    <div class="script" [innerHTML]="OSCES[id].script"></div>
-  </div>
-  <div *ngIf="activeView === 'expectations'">
-    <div class="expectations" [innerHTML]="OSCES[id].expectations"></div>
+  <div class="osce-container">
+    <div *ngIf="activeView === 'question'">
+      <div class="question" [innerHTML]="OSCES[id].question"></div>
+    </div>
+    <div *ngIf="activeView === 'script'">
+      <div class="script" [innerHTML]="OSCES[id].script"></div>
+    </div>
+    <div *ngIf="activeView === 'expectations'">
+      <div class="expectations" [innerHTML]="OSCES[id].expectations"></div>
+    </div>
   </div>
   <!-- /VIEW -->
 </section>
