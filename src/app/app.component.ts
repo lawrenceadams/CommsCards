@@ -25,6 +25,7 @@ export class AppComponent {
 
 
   isStudying: boolean = false;
+  isStudyMenu: boolean = true;
 
   constructor(private router: Router, private messageService: MessageService, private location: Location) {
     /**
@@ -46,8 +47,13 @@ export class AppComponent {
       */
       if (val instanceof NavigationEnd) {
         console.log(val.url);
-        if (val.url.includes('/card/')) {
+        if (val.url.includes('/study')) {
           this.isStudying = true;
+          if (val.url.includes('/card/')) {
+            this.isStudyMenu = false;
+          } else {
+            this.isStudyMenu = true;
+          }
         } else {
           this.isStudying = false;
         }

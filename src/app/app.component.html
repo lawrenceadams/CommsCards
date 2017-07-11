@@ -7,7 +7,7 @@
   </div>
   <ng-template #studyNavBar>
     <div class="nav-center">
-      <a class="nav-item nav-item-padded" (click)="sendMessage('previous')">
+      <a class="nav-item nav-item-padded" (click)="sendMessage('previous')" *ngIf="!isStudyMenu">
         <span class="icon">
           <i class="fa fa-arrow-left"></i>
         </span>
@@ -22,7 +22,7 @@
           <i class="fa fa-level-up"></i>
         </span>
     </a>
-      <a class="nav-item nav-item-padded" (click)="sendMessage('next')">
+      <a class="nav-item nav-item-padded" (click)="sendMessage('next')" *ngIf="!isStudyMenu">
         <span class="icon">
           <i class="fa fa-arrow-right"></i>
         </span>
