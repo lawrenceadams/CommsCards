@@ -22,6 +22,7 @@ import { SafeHTMLPipe } from "./common/pipes/htmlSanitizerBypass.pipe";
 import { UsefulLinksComponent } from './home/useful-links/useful-links.component';
 import { OsceMenuComponent } from './osce/osce-menu/osce-menu.component';
 import { OsceScenarioViewerComponent } from './osce/osce-scenario-viewer/osce-scenario-viewer.component';
+import { GoogleAnalyticsEventsService } from './common/services/google-analytics-events.service';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: "full" },
@@ -66,6 +67,7 @@ const routes: Routes = [
   providers: [
     CardProviderService,
     MessageService,
+    GoogleAnalyticsEventsService,
     { provide: LocationStrategy, useClass: HashLocationStrategy } // Comment this out for non hash based routing
   ],
   bootstrap: [AppComponent]

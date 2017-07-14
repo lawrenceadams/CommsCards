@@ -9,6 +9,8 @@ import { CardProviderService } from "../common/services/card-provider.service";
 import { MessageService } from "../common/services/messenger.service";
 import { SafeHTMLPipe } from "../common/pipes/htmlSanitizerBypass.pipe";
 
+import { GoogleAnalyticsEventsService } from "../common/services/google-analytics-events.service";
+
 @Component({
   selector: 'app-flash-card',
   templateUrl: './flash-card.component.html',
@@ -38,7 +40,8 @@ export class FlashCardComponent implements OnInit, OnDestroy {
     private router: Router,
     private service: CardProviderService,
     private messageService: MessageService,
-    private location: Location
+    private location: Location,
+    private analytics: GoogleAnalyticsEventsService
   ) {
     /*
     * Setup a service listener to recieve each message and act upon it accordingly
@@ -73,6 +76,8 @@ export class FlashCardComponent implements OnInit, OnDestroy {
       this.service.setStudyCards(); // Sets the service cards[] instance to the required cards
       this.cardsToStudy = this.service.getCards(); // Sets the local card instance to the required cards
     }
+
+    this.fireAnaylticsEvent();
   }
 
   ngOnDestroy() {
@@ -149,6 +154,7 @@ export class FlashCardComponent implements OnInit, OnDestroy {
 
     // Scroll to top of new card
     // Called here as next/prev card calls updateURLPath();
+    this.fireAnaylticsEvent();
     this.scrollToBottom();
   }
 
@@ -169,5 +175,9 @@ export class FlashCardComponent implements OnInit, OnDestroy {
     } catch (err) {
       console.error(err);
     }
+  }
+
+  fireAnaylticsEvent() {
+    this.analytics.emitEvent("FlashCards", "View", this.cardsToStudy[this.currentCardIndex].id, 1);
   }
 }
