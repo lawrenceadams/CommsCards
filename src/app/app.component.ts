@@ -5,11 +5,6 @@ import { Location } from "@angular/common";
 import { routeFadeStateTrigger } from "./common/route.animations";
 import { MessageService } from "./common/services/messenger.service";
 
-/**
- * Declare global Google Analytics object
- */
-declare var ga: any;
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -28,16 +23,6 @@ export class AppComponent {
   isStudyMenu: boolean = true;
 
   constructor(private router: Router, private messageService: MessageService, private location: Location) {
-    /**
-     * Google analytics implementation, allows use without setting on every page
-     */
-    router.events.subscribe((val) => {
-      if (val instanceof NavigationEnd) {
-        ga('set', 'page', val.url);
-        ga('send', 'pageview');
-      }
-    });
-
     // Get the currently set route/URL
     router.events.subscribe((val) => {
       /**
@@ -62,7 +47,9 @@ export class AppComponent {
       // Set URL for backing up to card menu
       var currentURL = this.location.path().split('/');
       currentURL.pop(); // Remove /card/:id
-      currentURL.pop(); // Remove /card/ 
+      if (!this.isStudyMenu) {
+        currentURL.pop(); // Remove /card/ if studying!
+      }
       this.queryMenuUrl = currentURL.join('/');
 
     });
