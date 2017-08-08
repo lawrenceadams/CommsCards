@@ -62,7 +62,7 @@ export class FlashCardComponent implements OnInit, OnDestroy {
     this.sub = this.route.params.subscribe(params => {
       this.query = params['query']; // Get the 'queryby' (system/type/year) from the url
       this.queryterm = params['queryterm']; // Get the 'query' (year 1/2/3) from the url. Bit hacky ~ might need to replace at somepoint
-      this.currentCardIndex = params['id']; // Sets the current card index from the URL.
+      this.currentCardIndex = Number(params['id']); // Sets the current card index from the URL.
     });
 
     this.cardsToStudy = this.service.getCards();
@@ -177,6 +177,9 @@ export class FlashCardComponent implements OnInit, OnDestroy {
     }
   }
 
+  /**
+   * Send Google Analytics event of FlashCard View
+   */
   fireAnaylticsEvent() {
     this.analytics.emitEvent("FlashCards", "View", this.cardsToStudy[this.currentCardIndex].id, 1);
   }
