@@ -47,7 +47,9 @@ export class AppComponent {
       // Set URL for backing up to card menu
       var currentURL = this.location.path().split('/');
       currentURL.pop(); // Remove /card/:id
-      currentURL.pop(); // Remove /card/ 
+      if (!this.isStudyMenu) {
+        currentURL.pop(); // Remove /card/ if studying!
+      }
       this.queryMenuUrl = currentURL.join('/');
 
     });
