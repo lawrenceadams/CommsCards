@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding, EventEmitter, OnDestroy, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, HostBinding, HostListener, EventEmitter, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 import { Location } from "@angular/common";
 import { Subscription } from "rxjs";
@@ -11,13 +11,19 @@ import { SafeHTMLPipe } from "../common/pipes/htmlSanitizerBypass.pipe";
 
 import { GoogleAnalyticsEventsService } from "../common/services/google-analytics-events.service";
 
+// Static Key Codes for keyboard interfacing
+export enum KEY_CODE {
+  RIGHT_ARROW = 39,
+  LEFT_ARROW = 37,
+  SPACE_BAR = 32
+}
+
 @Component({
   selector: 'app-flash-card',
   templateUrl: './flash-card.component.html',
   styleUrls: ['./flash-card.component.css'],
   animations: [routeFadeStateTrigger]
 })
-
 export class FlashCardComponent implements OnInit, OnDestroy {
   @HostBinding('@routeFadeState') routeAnimation = true;
   @ViewChild('backDiv') private backDiv: ElementRef;
@@ -34,6 +40,7 @@ export class FlashCardComponent implements OnInit, OnDestroy {
 
   private sub: any;
   private currentURL: string;
+
 
   constructor(
     private route: ActivatedRoute,
@@ -137,6 +144,26 @@ export class FlashCardComponent implements OnInit, OnDestroy {
     setTimeout(() => { this.isNotAnimating = false; this.isFadeOut = false; }, 50);
   }
 
+  // Keyboard Event Listener Setup.
+  @HostListener('window:keyup', ['$event'])
+  keyEvent(event: KeyboardEvent) {
+    if (event.keyCode === KEY_CODE.RIGHT_ARROW) {
+      this.nextCard();
+    }
+
+    if (event.keyCode === KEY_CODE.LEFT_ARROW) {
+      this.previousCard();
+    }
+
+    if (event.keyCode === KEY_CODE.SPACE_BAR) {
+      this.toggleFlip();
+    }
+  }
+
+  // 
+  // ======= HELPER FUNCTIONS ======
+  //
+
   /**
    * Used to update the URL for ease of use and allowing of sharing of cards.
    * 
@@ -161,7 +188,7 @@ export class FlashCardComponent implements OnInit, OnDestroy {
   /**
    * On clicking the front or back of the card the flip state it toggled
    */
-  toggleFlip() {
+  toggleFlip(): void {
     this.isFlipped = !this.isFlipped;
   }
 
@@ -169,7 +196,7 @@ export class FlashCardComponent implements OnInit, OnDestroy {
    * Scroll to top of card on next/prev card press
    * @returns {void}
    */
-  scrollToBottom(): void {
+  private scrollToBottom(): void {
     try {
       this.backDiv.nativeElement.scrollTop = 0;
     } catch (err) {
@@ -180,7 +207,7 @@ export class FlashCardComponent implements OnInit, OnDestroy {
   /**
    * Send Google Analytics event of FlashCard View
    */
-  fireAnaylticsEvent() {
+  private fireAnaylticsEvent(): void {
     this.analytics.emitEvent("FlashCards", "View", this.cardsToStudy[this.currentCardIndex].id, 1);
   }
 }
